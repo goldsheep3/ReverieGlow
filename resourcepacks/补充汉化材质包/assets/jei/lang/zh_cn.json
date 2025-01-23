@@ -1,0 +1,7 @@
+{
+    "jei.tooltip.show.all.recipes.hotkey": "按 \"%s\" 显示所有配方。",
+    "gui.jei.category.recipe.crashed": "此配方崩溃。请查看客户端日志以获取详细信息。",
+    "jei.key.mouse.left": "左键点击",
+    "jei.key.mouse.right": "右键点击",
+    "jei.alias.panda.spawn.egg": "濒危"
+}

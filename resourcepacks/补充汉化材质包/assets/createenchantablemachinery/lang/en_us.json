@@ -1,0 +1,13 @@
+{
+    "block.createenchantablemachinery.enchantable_crushing_wheel": "可附魔粉碎轮",
+    "block.createenchantablemachinery.enchantable_crushing_wheel_controller": "可附魔粉碎轮控制器",
+    "block.createenchantablemachinery.enchantable_encased_fan": "可附魔鼓风机",
+    "block.createenchantablemachinery.enchantable_mechanical_drill": "可附魔动力钻头",
+    "block.createenchantablemachinery.enchantable_mechanical_harvester": "可附魔动力收割机",
+    "block.createenchantablemachinery.enchantable_mechanical_mixer": "可附魔动力搅拌机",
+    "block.createenchantablemachinery.enchantable_mechanical_plough": "可附魔机动力犁",
+    "block.createenchantablemachinery.enchantable_mechanical_press": "可附魔动力辊压机",
+    "block.createenchantablemachinery.enchantable_mechanical_roller": "可附魔动力压路机",
+    "block.createenchantablemachinery.enchantable_mechanical_saw": "可附魔动力锯",
+    "block.createenchantablemachinery.enchantable_millstone": "可附魔石磨"
+}

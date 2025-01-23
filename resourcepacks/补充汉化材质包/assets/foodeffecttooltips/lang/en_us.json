@@ -1,0 +1,11 @@
+{
+    "cloth_config.FoodEffectTooltips.category.general": "常规",
+    "cloth_config.FoodEffectTooltips.ShowSuspiciousStewTooltips": "显示可疑炖菜提示",
+    "cloth_config.FoodEffectTooltips.UseAsWhitelistInstead": "改用白名单",
+    "cloth_config.FoodEffectTooltips.BlacklistedItemIdentifiers": "黑名单物品标识符",
+    "cloth_config.FoodEffectTooltips.BlacklistedModsIDs": "黑名单模组ID",
+    "text.cloth_config.FoodEffectTooltips.option.ShowSuspiciousStewTooltips": "显示可疑炖菜食物效果提示",
+    "text.cloth_config.FoodEffectTooltips.option.UseAsWhitelistInstead": "将列表用作白名单",
+    "text.cloth_config.FoodEffectTooltips.option.BlacklistedItemIdentifiers": "黑名单物品标识符",
+    "text.cloth_config.FoodEffectTooltips.option.BlacklistedModsIDs": "黑名单模组ID"
+}

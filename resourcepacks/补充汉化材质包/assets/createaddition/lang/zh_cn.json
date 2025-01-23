@@ -1,0 +1,14 @@
+{
+    "item.createaddition.diamond_grit_sandpaper.tooltip.summary": "可用于_精炼材料_。该过程可以通过发射器自动化。",
+    "item.createaddition.diamond_grit_sandpaper.tooltip.condition1": "使用时",
+    "item.createaddition.diamond_grit_sandpaper.tooltip.behaviour1": "在_副手_持有或_地板_上时_看着它们_时应用抛光",
+    "item.createaddition.copper_spool.tooltip.summary": "用于存储电线。",
+    "item.createaddition.festive_spool.tooltip.summary": "用于存储电线。",
+    "item.createaddition.gold_spool.tooltip.summary": "用于存储电线。",
+    "item.createaddition.electrum_spool.tooltip.summary": "用于存储电线。",
+    "item.createaddition.spool.tooltip.summary": "用于存储电线。",
+    "item.createaddition.spool.tooltip.condition1": "右键点击两个已连接的连接器",
+    "item.createaddition.spool.tooltip.behaviour1": "将移除电线连接并返回一个装满的_线轴_。",
+    "createaddition.subtitle.loud_zap": "特斯拉线圈电击",
+    "createaddition.subtitle.little_zap": "特斯拉线圈火花"
+}

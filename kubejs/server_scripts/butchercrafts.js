@@ -14,12 +14,12 @@ ServerEvents.tags('item', event => {
         'butchercraft:rabbit_splotched_head_item',
         'butchercraft:rabbit_white_head_item'
     ];
-    
     butchercraft_heads.forEach(i => {
         event.add('forge:heads', i);
     });
 })
 
+// 需求：匠魂3
 ServerEvents.tags('fluid', event => {
     // 屠宰过程产生的血液视为肉汤可用于生铁配方
     event.add('tconstruct:meat_soup', 'butchercraft:blood_fluid')

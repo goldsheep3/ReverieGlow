@@ -129,6 +129,7 @@ ServerEvents.recipes(event => {
 
     // 删除水的矿井
     event.remove({id:'createoreexcavation:ore_vein_type/water'})
+    event.remove({id:'createoreexcavation:extractor/water'})
     // 原添加钻石/绿宝石原石的匠魂处理
     event.custom(item_melting("createoreexcavation:raw_diamond", "tconstruct:molten_diamond", 100, 1450, 100))
     event.custom(item_melting("createoreexcavation:raw_emerald", "tconstruct:molten_emerald", 100, 934, 73))

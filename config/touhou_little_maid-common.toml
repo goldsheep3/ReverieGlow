@@ -82,7 +82,7 @@
 	MaidFairyBlacklistDimension = ["minecraft:the_nether", "minecraft:the_end", "twilightforest:twilight_forest"]
 	#Loss power point after player death
 	#Range: 0.0 ~ 5.0
-	PlayerDeathLossPowerPoint = 0.50
+	PlayerDeathLossPowerPoint = 0.5
 	#Give a soul spell item for player first join
 	GiveSoulSpell = true
 	#Give the Memorizable Gensokyo book item for player first join

@@ -1,7 +1,0 @@
-{
-    "commands.curios.drop.success": "已为 %s 丢弃槽位 %s 中的物品",
-    "commands.curios.dropAll.success": "已为 %s 丢弃所有槽位中的物品",
-    "commands.curios.replace.success": "已用 %s 替换 %s 的槽位 %s",
-    "gui.curios.toggle.cosmetics": "切换饰品",
-    "gui.curios.page": "第 %d / %d 页"
-}

@@ -1,5 +1,0 @@
-{
-    "modernfix.redirector_installed": "ModernFix 检测到已安装 Redirector。已知 Redirector 会导致许多奇怪且难以调试的问题，强烈建议将其移除。",
-    "modernfix.option.mixin.bugfix.restore_old_dragon_movement": "修复了 MC-272431，该问题记录了末影龙无法像 1.13 及更早版本那样潜入传送门。这导致末影龙的飞行方式与现代玩家习惯的方式有很大不同，并且还修补了一次性击杀的问题，因此默认情况下未启用。感谢 Jukitsu 识别出原版代码中的回归问题。",
-    "modernfix.option.mixin.bugfix.missing_block_entities": "Hypixel 向客户端发送的区块缺少一些方块实体数据，这使得箱子等物品看起来是不可见的。此修复通过在客户端创建所需的数据来解决问题。对于行为正常的服务器或单人游戏没有影响。"
-}

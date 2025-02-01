@@ -1,8 +1,0 @@
-{
-    "config.jade.plugin_bonsaitrees3.bonsaipot": "盆栽盆",
-    "gui.bonsaitrees3.label.jei.upgrade.bees": "授粉并获得果实掉落",
-    "gui.bonsaitrees3.label.jei.upgrade.energy": "插入电池以提高生长速度",
-    "jade.bonsaitrees3.bonsaipot.growing": "生长中: %d%%",
-    "jei.bonsaitrees3.requiresBees": "需要蜂巢升级",
-    "jei.bonsaitrees3.requiresUpgrade": "需要以下升级之一:"
-}

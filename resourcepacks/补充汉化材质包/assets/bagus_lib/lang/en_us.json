@@ -1,7 +1,0 @@
-{
-    "baguslib.config.shakeCameraForVanilla": "启用原版摇晃相机",
-    "command.bagus_lib.remove_all_dialog": "成功移除所有对话",
-    "command.bagus_lib.item_dialog": "成功添加物品对话",
-    "command.bagus_lib.dialog": "成功添加对话",
-    "command.bagus_lib.image_dialog": "成功添加图片对话"
-}

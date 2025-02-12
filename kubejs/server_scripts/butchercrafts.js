@@ -25,7 +25,7 @@ ServerEvents.tags('fluid', event => {
     event.add('tconstruct:meat_soup', 'butchercraft:blood_fluid')
 })
 
-// 需求：匠魂3、KubeJS Create
+// 需求：KubeJS Create
 ServerEvents.recipes(event => {
     // 头骨支持粉碎为骨粉
     let butchercraft_skulls = [

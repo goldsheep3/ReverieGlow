@@ -24,3 +24,7 @@ emi.json
 /backups
 /crash-reports
 ops.json
+/screenshots
+/map exports
+/kubejs/*/jsconfig.json
+/_update_pack

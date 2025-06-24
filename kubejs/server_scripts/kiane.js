@@ -68,7 +68,7 @@ PlayerEvents.loggedIn(event => {
       player.tell("§b更新内容:");
       updatesToShow.forEach(v => {
         player.stages.add(v);
-        player.tell(`§b- §9${v}§b: §a${update_history[v]}`);
+        player.tell(`§b- §9${v}§b: §a${update.desc}`);
       });
     }
 
@@ -93,7 +93,7 @@ ServerEvents.commandRegistry(event => {
 
         // 按版本顺序显示完整日志
         versions.forEach(v => {
-          player.tell(`§b- §9${v}§b: §a${update_history[v]}`);
+          player.tell(`§b- §9${item.version}§b: §a${item.desc}`);
         });
 
         player.tell("§3==========================================");

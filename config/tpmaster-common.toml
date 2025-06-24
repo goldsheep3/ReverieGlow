@@ -5,7 +5,7 @@
 	ACCEPT_DENY_PERMISSION_LEVEL = 0
 	#The permission level for away (random tp).
 	#Range: 0 ~ 4
-	AWAY_PERMISSION_LEVEL = 0
+	AWAY_PERMISSION_LEVEL = 4
 	#The permission level for request.
 	#Range: 0 ~ 4
 	REQUEST_PERMISSION_LEVEL = 0

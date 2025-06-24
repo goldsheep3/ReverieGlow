@@ -21,7 +21,6 @@ usernamecache.json
 BTLib.dll
 .vscode/
 .probe/
-emi.json
 backups/
 crash-reports/
 ops.json

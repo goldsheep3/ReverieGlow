@@ -322,7 +322,7 @@
 		enabled = true
 		#If enabled end crystals placed on a pedestals will provide an enchantment power bonus equivalent to 3 bookshelves
 		#Range: 0.0 ~ 100.0
-		crystal_enchanting = 3.0
+		crystal_enchanting = 3
 
 	[building.ash]
 		enabled = true
@@ -541,10 +541,6 @@
 #Vanilla tweaks
 [tweaks]
 
-	[tweaks.dragon_banner_pattern]
-		#Adds dragon banner pattern made from dragon head
-		enabled = true
-
 	[tweaks.shulker_helmet]
 		#Allows wearing shulker shells
 		enabled = true
@@ -676,4 +672,8 @@
 		#Chance that a slime mob will apply slimed effect on successful attack. Multiplied by the slime size
 		#Range: 0.0 ~ 1.0
 		chance_per_slime_size = 0.15
+
+	[tweaks.dragon_banner_pattern]
+		#Adds dragon banner pattern made from dragon head
+		enabled = true
 

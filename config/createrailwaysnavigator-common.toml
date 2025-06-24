@@ -14,7 +14,7 @@
 		exclude_trains = false
 		#How much transfers should be avoided. Higher values try to use fewer transfers, even if this increases the travel time. (Default: 10000)
 		#Range: > 1000
-		transfer_cost = 10000
+		transfer_cost = 5000
 
 	[createrailwaysnavigator_common_config.train_data_calculation]
 		#When activated, CRN calculates the transit times of the trains and does not use the calculations from Create. CRN is much more accurate, while Create calculates an average. (Default: ON)

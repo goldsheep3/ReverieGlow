@@ -21,7 +21,7 @@
 		   Since the memory usage is calculated based on a 10-second interval, for stronger cleaning effects, please set a lower value.
 		   Unit: percentage.
 		*/
-		"minMemoryUsage": 75,
+		"minMemoryUsage": 80,
 		/* 
 		   Silent memory cleaning.
 		   This will not display memory cleaning information.

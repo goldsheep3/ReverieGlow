@@ -17,7 +17,7 @@ shouldReturnPortalBeUsable = true
 portalUnlockedByAdvancement = ""
 #The max amount of water spaces the mod will check for when creating a portal. Very high numbers may cause issues.
 #Range: > 4
-maxPortalSize = 64
+maxPortalSize = 16
 #If true, Keepsake Caskets that are spawned when a player dies will not be accessible by other players. Use this if you dont want people taking from other people's death caskets. NOTE: server operators will still be able to open locked caskets.
 uuid_locking = false
 #If true, disables the ability to make Skull Candles by right clicking a vanilla skull with a candle. Turn this on if you're having mod conflict issues for some reason.
@@ -67,7 +67,7 @@ cloudBlockPrecipitationDistance = 32
 	flipIdList = false
 	#If true, the uncrafting table will also be allowed to uncraft shapeless recipes.
 	#The table was originally intended to only take shaped recipes, but this option remains for people who wish to keep the functionality.
-	enableShapelessCrafting = false
+	enableShapelessCrafting = true
 	#Disables the uncrafting function of the uncrafting table. Recommended as a last resort if there's too many things to change about its behavior (or you're just lazy, I dont judge).
 	#Do note that special uncrafting recipes are not disabled as the mod relies on them for other things.
 	disableUncrafting = false

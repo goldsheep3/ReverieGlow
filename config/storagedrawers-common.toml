@@ -8,10 +8,10 @@
 	#on X, Y, or Z planes.  The default value of 50 gives the controller a very
 	#large range, but not beyond the chunk load distance.
 	#Range: 1 ~ 75
-	controllerRange = 50
+	controllerRange = 32
 	#Whether redstone upgrades should emit an analog redstone signal, requiring
 	#the use of a comparator to read it.  This will default to true starting with MC 1.21.
-	enableAnalogRedstone = false
+	enableAnalogRedstone = true
 	enableUI = true
 	enableSidedInput = true
 	enableSidedOutput = true
@@ -85,7 +85,7 @@
 
 [Integration]
 	#Add CoFH Core specific features if the mod is loaded
-	enableCoFHIntegration = true
+	enableCoFHIntegration = false
 	#When true, shows quantity as NxS + R (by stack size) rather than count
 	wailaStackRemainder = true
 	#When true, does not show current quantities unless quantify key was used

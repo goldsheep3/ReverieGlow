@@ -1,7 +1,7 @@
 
 [Gameplay]
 	#If TRUE, dismantled blocks will be placed in the dismantling player's inventory if possible.
-	"Return Dismantle Drops" = false
+	"Return Dismantle Drops" = true
 
 	[Gameplay.Fishing]
 		#If TRUE, Fishing will cause exhaustion.

@@ -1,5 +1,0 @@
-
-[Render]
-	#This is the master control for rendering the rendering of the inhabitants using the maid model.
-	ENABLE_GLOBAL_RENDER = true
-

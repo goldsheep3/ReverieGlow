@@ -1,6 +1,517 @@
 {
-  "favorites": [],
+  "favorites": [
+    {
+      "stack": "item:kubejs:time_core",
+      "recipe": "kubejs:time_core"
+    }
+  ],
   "lookup_history": [
+    "item:minecraft:grindstone",
+    "item:kubejs:time_core",
+    "item:minecraft:clock",
+    "item:expandedstorage:diamond_chest",
+    "item:expandedstorage:gold_chest",
+    "item:sophisticatedbackpacks:upgrade_base",
+    "item:sophisticatedbackpacks:stack_upgrade_tier_1",
+    {
+      "type": "item",
+      "id": "minecraft:blaze_rod",
+      "amount": 2
+    },
+    "item:minecraft:lodestone",
+    "item:minecraft:writable_book",
+    "item:minecraft:enchanted_book{StoredEnchantments:[{id:\"cofh_core:holding\",lvl:4s}]}",
+    "item:quark:hollow_acacia_log",
+    "item:tacz:workbench_a{BlockId:\"tacz:ammo_workbench\"}",
+    "item:tacz:ammo{AmmoId:\"tacz:357mag\"}",
+    {
+      "type": "item",
+      "id": "minecraft:lilac",
+      "amount": 64
+    },
+    "item:minecraft:rabbit_stew",
+    "item:minecraft:rotten_flesh",
+    "item:minecraft:cooked_rabbit",
+    "item:minecraft:beef",
+    "item:minecraft:mutton",
+    "item:mekanism:creative_fluid_tank{mekData:{FluidTanks:[{Tank:0b,stored:{Amount:2147483647,FluidName:\"tconstruct:meat_soup\"}}]}}",
+    {
+      "type": "fluid",
+      "id": "tconstruct:meat_soup",
+      "amount": 1000
+    },
+    "item:ceramicbucket:ceramic_bucket{Fluid:{Amount:1000,FluidName:\"tconstruct:meat_soup\"}}",
+    {
+      "type": "item",
+      "id": "tconstruct:seared_bricks",
+      "amount": 6
+    },
+    "item:tconstruct:cast_chest",
+    "item:tconstruct:part_chest",
+    "item:tconstruct:tinkers_chest",
+    {
+      "type": "item",
+      "id": "minecraft:cherry_stairs",
+      "amount": 6
+    },
+    "item:create:brass_sheet",
+    "item:create:pulse_timer",
+    "item:create:pulse_repeater",
+    "item:minecraft:observer",
+    "item:minecraft:scaffolding",
+    "item:barbequesdelight:raw_lamb_skewer",
+    {
+      "type": "item",
+      "id": "butchercraft:sheep_hide",
+      "amount": 8
+    },
+    {
+      "type": "item",
+      "id": "butchercraft:sheep_head_item",
+      "amount": 8
+    },
+    {
+      "type": "item",
+      "id": "butchercraft:barn_wood_block_item",
+      "amount": 8
+    },
+    "item:butchercraft:blood_fluid_bucket",
+    {
+      "type": "item",
+      "id": "minecraft:bucket",
+      "amount": 2
+    },
+    "item:butchercraft:skinning_knife{Damage:0}",
+    "item:butchercraft:bone_saw{Damage:0}",
+    "item:butchercraft:gut_knife{Damage:0}",
+    "item:butchercraft:butcher_knife{Damage:0}",
+    {
+      "type": "fluid",
+      "id": "butchercraft:blood_fluid",
+      "amount": 1000
+    },
+    {
+      "type": "fluid",
+      "id": "tconstruct:liquid_soul",
+      "amount": 150
+    },
+    "item:enchantinginfuser:advanced_enchanting_infuser",
+    "item:minecraft:enchanting_table",
+    "item:enchantinginfuser:enchanting_infuser",
+    {
+      "type": "item",
+      "id": "minecraft:red_banner",
+      "nbt": "{BlockEntityTag:{Patterns:[{Color:15,Pattern:\"sku\"}],id:\"minecraft:banner\"}}",
+      "amount": 16
+    },
+    "item:mekanism:logistical_sorter",
+    "item:mekanism:digital_miner",
+    "item:minecraft:iron_ore",
+    "#item:minecraft:iron_ores",
+    "item:minecraft:raw_iron",
+    "item:minecraft:iron_ingot",
+    "item:butchercraft:grinder_tip",
+    "item:butchercraft:grinder_block_item",
+    "item:butchercraft:butcher_block_block_item",
+    "item:minecraft:hopper",
+    "item:butchercraft:meat_hook_item",
+    "item:minecraft:chain",
+    "item:touhou_little_maid:chair",
+    "item:create:framed_glass_door",
+    "item:create:framed_glass",
+    "item:minecraft:blue_orchid",
+    {
+      "type": "item",
+      "id": "minecraft:warped_slab",
+      "amount": 26
+    },
+    "item:expandedstorage:diamond_to_netherite_conversion_kit",
+    "item:expandedstorage:netherite_chest",
+    "item:expandedstorage:iron_chest",
+    "item:expandedstorage:old_iron_chest",
+    "item:expandedstorage:old_gold_chest",
+    {
+      "type": "item",
+      "id": "minecraft:pink_petals",
+      "amount": 52
+    },
+    "item:tconstruct:clear_item_frame",
+    "item:touhou_little_maid:tank_backpack{Tanks:{Amount:9000,FluidName:\"minecraft:lava\"}}",
+    "item:minecraft:lantern",
+    "item:touhou_little_maid:sanae_gohei{Damage:0}",
+    "item:touhou_little_maid:hakurei_gohei{Damage:0}",
+    {
+      "type": "item",
+      "id": "minecraft:cherry_trapdoor",
+      "amount": 6
+    },
+    {
+      "type": "item",
+      "id": "minecraft:cherry_fence",
+      "amount": 3
+    },
+    {
+      "type": "item",
+      "id": "minecraft:cherry_slab",
+      "amount": 8
+    },
+    "item:storagedrawers:compacting_drawers_2",
+    "item:minecraft:piston",
+    "item:storagedrawers:compacting_drawers_3",
+    "item:minecraft:sand",
+    "item:twilightforest:crumble_horn{Damage:0}",
+    "item:minecraft:flint",
+    {
+      "type": "item",
+      "id": "minecraft:gravel",
+      "amount": 64
+    },
+    "item:create:super_glue{Damage:0}",
+    "item:createdieselgenerators:hammer{Damage:0}",
+    "item:create:iron_sheet",
+    "#item:forge:plates/iron",
+    "item:thermal:iron_plate",
+    "item:create:windmill_bearing",
+    "item:minecraft:cobblestone",
+    {
+      "type": "item",
+      "id": "create:large_cogwheel",
+      "amount": 32
+    },
+    "item:create:millstone",
+    "item:minecraft:glowstone",
+    {
+      "type": "item",
+      "id": "minecraft:glowstone_dust",
+      "amount": 64
+    },
+    "item:minecraft:white_dye",
+    "item:minecraft:white_concrete_powder",
+    "item:minecraft:white_concrete",
+    "item:minecraft:stonecutter",
+    "item:bonsaitrees3:bonsaipot",
+    {
+      "type": "item",
+      "id": "minecraft:cherry_sapling",
+      "amount": 9
+    },
+    {
+      "type": "fluid",
+      "id": "tconstruct:molten_cinderslime",
+      "amount": 180
+    },
+    {
+      "type": "fluid",
+      "id": "tconstruct:ichor",
+      "amount": 200
+    },
+    {
+      "type": "item",
+      "id": "tconstruct:ichor_slime_crystal",
+      "amount": 4
+    },
+    {
+      "type": "item",
+      "id": "tconstruct:ichor_slime_crystal_block",
+      "amount": 64
+    },
+    "item:minecraft:quartz",
+    {
+      "type": "fluid",
+      "id": "tconstruct:molten_quartz",
+      "amount": 400
+    },
+    "item:minecraft:quartz_block",
+    "item:minecraft:cyan_dye",
+    "#item:forge:storage_blocks/quartz",
+    "item:minecraft:mangrove_fence",
+    "item:minecraft:stripped_bamboo_block",
+    {
+      "type": "item",
+      "id": "minecraft:bamboo_hanging_sign",
+      "amount": 6
+    },
+    "item:farmersdelight:canvas",
+    "item:farmersdelight:straw",
+    {
+      "type": "fluid",
+      "id": "tconstruct:molten_brass",
+      "amount": 90
+    },
+    "item:create:brass_hand",
+    "item:create:deployer",
+    "item:railways:track_bamboo",
+    {
+      "type": "item",
+      "id": "minecraft:bamboo",
+      "amount": 64
+    },
+    {
+      "type": "item",
+      "id": "minecraft:brown_wool",
+      "amount": 64
+    },
+    "item:create:goggles",
+    "item:touhou_little_maid:entity_placeholder{RecipeId:\"touhou_little_maid:altar/spawn_box\"}",
+    "item:create:wrench",
+    "item:create:depot",
+    "item:constructionwand:iron_wand{Damage:0,wand_options:{}}",
+    {
+      "type": "item",
+      "id": "create:andesite_alloy",
+      "amount": 64
+    },
+    "item:create:large_water_wheel",
+    "item:create:water_wheel",
+    "item:createdieselgenerators:entity_filter",
+    "item:createdieselgenerators:mold{Mold:\"createdieselgenerators:bar\"}",
+    {
+      "type": "fluid",
+      "id": "tconstruct:molten_zinc",
+      "amount": 90
+    },
+    {
+      "type": "item",
+      "id": "create:raw_zinc",
+      "amount": 64
+    },
+    "item:minecraft:gunpowder",
+    "item:torcherino:double_compressed_torcherino",
+    "item:torcherino:compressed_lantern",
+    "item:torcherino:compressed_torcherino",
+    "item:kubejs:compressed_time_core",
+    "item:tiab:time_in_a_bottle{storedTime:232740,totalAccumulatedTime:262740}",
+    "item:tacz:modern_kinetic_gun{GunCurrentAmmoCount:1,GunFireMode:\"SEMI\",GunId:\"tacz:rpg7\",HasBulletInBarrel:1b}",
+    "item:tacz:ammo_box{Level:2}",
+    "item:tacz:ammo_box{Level:1}",
+    "item:tacz:ammo_box{Level:0}",
+    "item:tarotcards:tarot_deck",
+    {
+      "type": "item",
+      "id": "minecraft:raw_copper_block",
+      "amount": 64
+    },
+    {
+      "type": "item",
+      "id": "minecraft:raw_copper",
+      "amount": 64
+    },
+    "item:create:crimsite",
+    "item:rusticdelight:coffee_beans",
+    {
+      "type": "item",
+      "id": "minecraft:egg",
+      "amount": 16
+    },
+    "item:minecraft:water_bucket",
+    "item:vintagedelight:fermenting_jar",
+    {
+      "type": "item",
+      "id": "vintagedelight:pickled_egg",
+      "amount": 5
+    },
+    "item:tacz:attachment{AttachmentId:\"tacz:light_extended_mag_3\"}",
+    "item:tacz:modern_kinetic_gun{GunCurrentAmmoCount:7,GunFireMode:\"SEMI\",GunId:\"tacz:m1911\",HasBulletInBarrel:1b}",
+    {
+      "type": "item",
+      "id": "quark:gold_bars",
+      "amount": 2
+    },
+    {
+      "type": "item",
+      "id": "minecraft:lapis_lazuli",
+      "amount": 64
+    },
+    {
+      "type": "fluid",
+      "id": "tconstruct:molten_amethyst_bronze",
+      "amount": 0
+    },
+    "item:tconstruct:part_builder",
+    "item:tconstruct:tinker_station",
+    "item:tconstruct:modifier_worktable",
+    "item:tconstruct:pattern",
+    "item:tconstruct:crafting_station",
+    "item:minecraft:white_bed",
+    "item:mekanism:precision_sawmill",
+    "item:minecraft:cherry_sign",
+    "item:minecraft:oak_sign",
+    "item:minecraft:birch_sign",
+    "item:tacz:gun_smith_table",
+    {
+      "type": "item",
+      "id": "quark:iron_plate",
+      "amount": 64
+    },
+    {
+      "type": "item",
+      "id": "quark:rusty_iron_plate",
+      "amount": 8
+    },
+    {
+      "type": "item",
+      "id": "mekanism:raw_osmium",
+      "amount": 64
+    },
+    {
+      "type": "item",
+      "id": "quark:oak_chest",
+      "amount": 16
+    },
+    {
+      "type": "fluid",
+      "id": "tconstruct:molten_silver",
+      "amount": 90
+    },
+    {
+      "type": "item",
+      "id": "thermal:raw_silver",
+      "amount": 59
+    },
+    {
+      "type": "fluid",
+      "id": "tconstruct:molten_copper",
+      "amount": 13770
+    },
+    {
+      "type": "item",
+      "id": "storagedrawers:upgrade_template",
+      "amount": 4
+    },
+    {
+      "type": "item",
+      "id": "storagedrawers:birch_half_drawers_4",
+      "amount": 4
+    },
+    "#item:minecraft:oak_logs",
+    {
+      "type": "item",
+      "id": "minecraft:oak_planks",
+      "amount": 4
+    },
+    "item:aquaculture:driftwood",
+    "item:tconstruct:seared_brick",
+    {
+      "type": "fluid",
+      "id": "tconstruct:molten_clay",
+      "amount": 1000
+    },
+    {
+      "type": "item",
+      "id": "minecraft:clay",
+      "amount": 37
+    },
+    "item:tconstruct:grout",
+    {
+      "type": "fluid",
+      "id": "tconstruct:seared_stone",
+      "amount": 250
+    },
+    "item:tconstruct:seared_fuel_gauge",
+    "item:tconstruct:seared_basin",
+    "item:tconstruct:seared_drain",
+    "item:tconstruct:seared_chute",
+    "item:kubejs:double_compressed_time_core",
+    "item:tconstruct:seared_fuel_tank",
+    "item:tconstruct:smeltery_controller",
+    "item:thermal:tin_ore",
+    "item:quark:raw_copper_bricks",
+    "item:thermal:deepslate_sulfur_ore",
+    "item:minecraft:diamond_ore",
+    {
+      "type": "item",
+      "id": "quark:hollow_oak_log",
+      "amount": 12
+    },
+    "item:mekanismtools:gold_paxel{Damage:0}",
+    {
+      "type": "item",
+      "id": "aquaculture:carp",
+      "amount": 3
+    },
+    "item:sophisticatedbackpacks:pickup_upgrade",
+    "item:sophisticatedbackpacks:stack_upgrade_tier_2",
+    "item:botania:bauble_box",
+    {
+      "type": "item",
+      "id": "farmersdelight:cooked_rice",
+      "remainder": "item:minecraft:bowl"
+    },
+    {
+      "type": "item",
+      "id": "miners_delight:tentacles",
+      "amount": 3
+    },
+    "item:minecraft:ink_sac",
+    {
+      "type": "item",
+      "id": "miners_delight:squid",
+      "amount": 3
+    },
+    "item:aquaculture:brown_trout",
+    {
+      "type": "item",
+      "id": "thermal:rubberwood_log",
+      "amount": 6
+    },
+    "item:minecraft:stripped_cherry_log",
+    "item:touhou_little_maid:camera{Damage:5,RepairCost:0}",
+    {
+      "type": "item",
+      "id": "minecraft:tripwire_hook",
+      "amount": 16
+    },
+    "item:minecraft:stone_slab",
+    "item:supplementaries:ash_brick",
+    {
+      "type": "item",
+      "id": "supplementaries:ash",
+      "amount": 4
+    },
+    "item:quark:birch_chest",
+    {
+      "type": "item",
+      "id": "minecraft:oak_log",
+      "amount": 64
+    },
+    "item:domum_ornamentum:architectscutter",
+    {
+      "type": "item",
+      "id": "minecraft:dried_kelp_block",
+      "amount": 5
+    },
+    {
+      "type": "item",
+      "id": "minecraft:feather",
+      "amount": 11
+    },
+    {
+      "type": "item",
+      "id": "minecraft:spider_eye",
+      "amount": 2
+    },
+    "item:minecraft:brick",
+    "item:ceramicbucket:ceramic_bucket{Fluid:{Amount:1000,FluidName:\"tconstruct:molten_clay\"}}",
+    "item:tconstruct:seared_heater",
+    "item:tconstruct:foundry_controller",
+    "item:tconstruct:seared_melter",
+    "item:tconstruct:seared_ingot_gauge",
+    {
+      "type": "item",
+      "id": "vintagedelight:salt_dust",
+      "amount": 4
+    },
+    "item:thermal:lead_ingot",
+    {
+      "type": "item",
+      "id": "mekanism:raw_lead",
+      "amount": 5
+    },
+    {
+      "type": "item",
+      "id": "minecraft:clay_ball",
+      "amount": 64
+    },
     {
       "type": "jemi",
       "uid": "infuse type:mekanism:bio"
@@ -36,8 +547,6 @@
     "#item:itemfilters:filters",
     "item:itemfilters:and",
     "item:torcherino:torcherino",
-    "item:kubejs:time_core",
-    "item:tiab:time_in_a_bottle{}",
     "item:createcafe:mana_berries",
     "item:minecraft:sweet_berries",
     "item:quark:acacia_post",
@@ -47,18 +556,8 @@
     "item:coffee_delight:coffee_berries",
     "item:createcafe:coffee_beans",
     "item:createcafe:coffee_fruit",
-    {
-      "type": "fluid",
-      "id": "tconstruct:liquid_soul",
-      "amount": 0
-    },
     "item:clay:soldier/clay",
-    "item:minecraft:stonecutter",
     "item:create:filter",
-    "item:sophisticatedbackpacks:upgrade_base",
-    "item:sophisticatedbackpacks:stack_upgrade_tier_1",
-    "item:sophisticatedbackpacks:stack_upgrade_tier_2",
-    "item:minecraft:iron_ingot",
     "item:minecraft:iron_block",
     "item:sophisticatedbackpacks:stack_upgrade_starter_tier",
     "item:minecraft:potato",
@@ -80,13 +579,6 @@
       "type": "item",
       "id": "createcafe:cassava_seeds",
       "amount": 59
-    },
-    "item:minecraft:raw_copper_block",
-    "item:quark:raw_copper_bricks",
-    {
-      "type": "item",
-      "id": "minecraft:raw_copper",
-      "amount": 64
     },
     "item:thermal:lead_ore",
     "item:create:crushed_raw_lead",
@@ -146,7 +638,6 @@
       "id": "create:crushed_raw_copper",
       "amount": 64
     },
-    "item:mekanism:raw_osmium",
     "item:mekanism:osmium_ore",
     "item:ae2:chest",
     {
@@ -159,7 +650,6 @@
       "id": "ae2:certus_quartz_dust",
       "amount": 21
     },
-    "item:storagedrawers:compacting_drawers_2",
     "item:ae2:fluix_glass_cable",
     {
       "type": "item",
@@ -181,7 +671,6 @@
       "id": "minecraft:redstone",
       "amount": 64
     },
-    "item:create:depot",
     {
       "type": "item",
       "id": "botania:dragonstone",
@@ -233,11 +722,6 @@
     "item:twilightforest:charm_of_life_1",
     "item:minecraft:netherite_upgrade_smithing_template",
     {
-      "type": "fluid",
-      "id": "butchercraft:blood_fluid",
-      "amount": 56000
-    },
-    {
       "type": "item",
       "id": "quark:glow_lichen_growth",
       "amount": 6
@@ -252,19 +736,12 @@
     },
     {
       "type": "item",
-      "id": "ironchest:gold_chest",
-      "amount": 3
-    },
-    "item:ironchest:iron_chest",
-    {
-      "type": "item",
       "id": "minecraft:chest",
       "amount": 3
     },
     "item:easy_villagers:auto_trader",
     "item:easy_villagers:trader",
     "item:minecraft:sticky_piston",
-    "item:minecraft:piston",
     "item:botania:overgrowth_seed",
     "item:botania:ancient_will_verac",
     "item:botania:elementium_sword{Damage:0}",
@@ -286,12 +763,6 @@
       "amount": 51
     },
     "item:ae2:logic_processor_press",
-    "item:create:brass_hand",
-    {
-      "type": "item",
-      "id": "create:deployer",
-      "amount": 8
-    },
     "item:create:mechanical_press",
     {
       "type": "item",
@@ -317,18 +788,14 @@
     "item:ae2:silicon",
     "item:ae2:silicon_press",
     "item:minecraft:blue_bed",
-    "item:touhou_little_maid:camera{Damage:23}",
     "item:touhou_little_maid:wireless_io{BindingPos:{X:220,Y:59,Z:-155},ItemFilterList:{Items:[],Size:9},ItemFilterMode:1b,ItemIOMode:0b}",
-    "item:ironchest:diamond_chest",
     {
       "type": "item",
       "id": "tacz:modern_kinetic_gun",
       "nbt": "{GunCurrentAmmoCount:0,GunFireMode:\"SEMI\",GunId:\"tacz:m700\",HasBulletInBarrel:0b}",
       "amount": 4
     },
-    "item:sophisticatedbackpacks:pickup_upgrade",
     "item:domum_ornamentum:shingle_flat{textureData:{}}",
-    "item:create:framed_glass",
     "item:nethersdelight:strider_slice",
     "#item:nethersdelight:raw_strider",
     {
@@ -336,8 +803,6 @@
       "id": "nethersdelight:propelpearl",
       "amount": 64
     },
-    "item:minecraft:flint",
-    "item:minecraft:gunpowder",
     "item:minecraft:lingering_potion{Potion:\"minecraft:long_fire_resistance\"}",
     "item:thermal:sulfur_dust",
     "#item:forge:dusts/sulfur",
@@ -354,8 +819,6 @@
       "amount": 45
     },
     "item:minecraft:cake",
-    "item:touhou_little_maid:entity_placeholder{RecipeId:\"touhou_little_maid:altar/spawn_box\"}",
-    "item:tconstruct:foundry_controller",
     {
       "type": "fluid",
       "id": "createcafe:melted_sugar",
@@ -408,13 +871,6 @@
     },
     "#item:tconstruct:foundry_bricks",
     "item:tconstruct:scorched_drain",
-    "item:tconstruct:grout",
-    "item:tconstruct:seared_brick",
-    {
-      "type": "item",
-      "id": "tconstruct:seared_bricks",
-      "amount": 39
-    },
     "item:minecraft:dragon_head",
     {
       "type": "fluid",
@@ -459,10 +915,8 @@
     },
     "item:fruitsdelight:chorus_cauldron",
     "item:quark:chorus_fruit_block",
-    "item:bonsaitrees3:bonsaipot",
     "item:touhou_little_maid:ultramarine_orb_elixir{Damage:0}",
     "item:minecraft:totem_of_undying",
-    "item:farmersdelight:cooked_rice",
     "item:touhou_little_maid:magic_protect_bauble{Damage:0}",
     "item:touhou_little_maid:fire_protect_bauble{Damage:0}",
     "item:touhou_little_maid:explosion_protect_bauble{Damage:0}",
@@ -477,11 +931,6 @@
       "id": "minecraft:cooked_beef",
       "amount": 64
     },
-    {
-      "type": "item",
-      "id": "minecraft:gravel",
-      "amount": 64
-    },
     "item:minecraft:mushroom_stem",
     {
       "type": "item",
@@ -492,7 +941,6 @@
     "item:minecraft:mycelium",
     "item:farmersdelight:minced_beef",
     "item:farmersdelight:fried_egg",
-    "item:minecraft:egg",
     {
       "type": "item",
       "id": "fruitsdelight:pineapple_sapling",
@@ -716,14 +1164,11 @@
     "item:mekanismtools:iron_paxel{Damage:0}",
     "item:thermal:enderium_ingot",
     "item:minecraft:nether_brick",
-    "item:minecraft:brick",
-    "item:supplementaries:ash_brick",
     "item:twilightforest:ironwood_ingot",
     "item:aquaculture:neptunium_block",
     "item:aquaculture:neptunium_ingot",
     "item:maidsoulkitchen:culinary_hub",
     "item:colonies_maidcitizen:npc_tool",
-    "item:storagedrawers:upgrade_template",
     "item:minecraft:warped_fungus{__storagedrawers_count:3024}",
     "item:touhou_little_maid:bookshelf",
     "item:touhou_little_maid:chair_show",
@@ -731,7 +1176,6 @@
     "item:touhou_little_maid:maid_bed",
     "item:touhou_little_maid:picnic_basket",
     "item:touhou_little_maid:maid_beacon{StorageData:{}}",
-    "item:tconstruct:seared_basin",
     "item:interiors:light_blue_chair",
     "item:interiors:green_chair",
     {
@@ -757,11 +1201,6 @@
     "item:tconstruct:mighty_smelting",
     "item:tconstruct:tinkers_gadgetry",
     "item:tconstruct:encyclopedia",
-    {
-      "type": "fluid",
-      "id": "tconstruct:seared_stone",
-      "amount": 250
-    },
     "item:minecraft:book",
     "item:tconstruct:materials_and_you",
     {
@@ -777,16 +1216,10 @@
       "id": "tconstruct:molten_invar",
       "amount": 1000
     },
-    "item:tconstruct:tinker_station",
     {
       "type": "fluid",
       "id": "tconstruct:molten_slimesteel",
       "amount": 0
-    },
-    {
-      "type": "item",
-      "id": "minecraft:quartz",
-      "amount": 64
     },
     "item:tconstruct:sky_slime_crystal",
     {
@@ -819,7 +1252,6 @@
       "id": "minecraft:glass",
       "amount": 64
     },
-    "item:minecraft:sand",
     "item:minecraft:suspicious_sand",
     "item:ends_delight:enderman_gristle",
     {
@@ -828,11 +1260,6 @@
       "amount": 2
     },
     "item:ends_delight:enderman_gristle_stew",
-    {
-      "type": "item",
-      "id": "minecraft:blaze_rod",
-      "amount": 29
-    },
     {
       "type": "fluid",
       "id": "tconstruct:blazing_blood",
@@ -876,7 +1303,6 @@
       "id": "botania:cyan_petal",
       "amount": 38
     },
-    "item:minecraft:cyan_dye",
     "item:thermal:apatite",
     "item:cuisinedelight:meat_platter{CookedFoodData:{entries:[{burnt:0b,itemSize:1,overcooked:0b,raw:0b,stack:{Count:1b,id:\"minecraft:egg\"}}],glowstone:0,nutrition:8,redstone:0,score:100,size:1,total:1,types:[\"MEAT\"]}}",
     "item:minecraft:magma_block",
@@ -887,12 +1313,6 @@
     "item:minecraft:stripped_cherry_wood",
     "item:minecraft:chainmail_chestplate{Damage:0,RepairCost:0,display:{Name:\u0027{\"text\":\"Ancient Chestplate\"}\u0027}}",
     "item:twilightforest:diamond_minotaur_axe{Damage:0}",
-    {
-      "type": "item",
-      "id": "minecraft:clay_ball",
-      "amount": 16
-    },
-    "item:tconstruct:seared_fuel_gauge",
     "item:minecolonies:iron_scimitar{Damage:0}",
     "item:minecraft:diamond",
     "item:nethersdelight:diamond_machete{Damage:0}",
@@ -920,15 +1340,10 @@
     "item:farmersdelight:golden_knife{Damage:0}",
     "item:aquaculture:diamond_fillet_knife{Damage:0}",
     "item:aquaculture:gold_fillet_knife{Damage:0}",
-    "item:butchercraft:bone_saw{Damage:0}",
-    "item:butchercraft:gut_knife{Damage:0}",
-    "item:butchercraft:skinning_knife{Damage:0}",
-    "item:butchercraft:butcher_knife{Damage:0}",
     "item:botania:manasteel_shears{Damage:0}",
     "item:nethersdelight:iron_machete{Damage:0}",
     "item:ae2:certus_quartz_cutting_knife{Damage:0}",
     "item:minecraft:shears{Damage:0}",
-    "item:storagedrawers:compacting_drawers_3",
     "item:storagedrawers:compacting_half_drawers_2",
     "#item:storagedrawers:full_drawers",
     {
@@ -963,15 +1378,9 @@
     "item:storagedrawers:acacia_full_drawers_1",
     {
       "type": "item",
-      "id": "minecraft:cobblestone",
-      "amount": 64
-    },
-    {
-      "type": "item",
       "id": "minecraft:oak_slab",
       "amount": 3
     },
-    "item:minecraft:oak_planks",
     "item:minecraft:spyglass",
     "item:fruitsdelight:orange_chicken",
     "item:touhou_little_maid:extinguisher{Damage:0}",
@@ -997,15 +1406,8 @@
       "amount": 64
     },
     "item:minecraft:potion{Potion:\"minecraft:water_breathing\"}",
-    "item:butchercraft:meat_hook_item",
-    "item:minecraft:chain",
     "item:touhou_little_maid:crafting_table_backpack",
     "item:touhou_little_maid:maid_backpack_middle",
-    {
-      "type": "item",
-      "id": "minecraft:rotten_flesh",
-      "amount": 209
-    },
     {
       "type": "item",
       "id": "minecraft:pink_wool",
@@ -1031,11 +1433,6 @@
       "id": "tconstruct:scorched_lantern",
       "nbt": "{tank:{Amount:50,FluidName:\"tconstruct:blazing_blood\"}}",
       "amount": 42
-    },
-    {
-      "type": "item",
-      "id": "quark:oak_chest",
-      "amount": 2
     },
     "item:easy_piglins:barterer",
     "#item:forge:glass_panes/colorless",
@@ -1083,7 +1480,6 @@
     "item:touhou_little_maid:broom",
     "item:touhou_little_maid:keyboard",
     "item:minecraft:note_block",
-    "item:touhou_little_maid:tank_backpack",
     "item:touhou_little_maid:furnace_backpack",
     {
       "type": "item",
@@ -1096,7 +1492,6 @@
       "amount": 35
     },
     "item:tconstruct:mattock{Damage:0,tic_broken:0b,tic_materials:[\"tconstruct:amethyst_bronze\",\"tconstruct:cobalt\",\"tconstruct:amethyst_bronze\"],tic_modifiers:[{level:2,name:\"tconstruct:crumbling\"},{level:1,name:\"tconstruct:lightweight\"},{level:1,name:\"tconstruct:tilling\"}],tic_multipliers:{\"tconstruct:attack_damage\":1.1f,\"tconstruct:durability\":1.25f,\"tconstruct:mining_speed\":1.1f},tic_persistent:{},tic_stats:{\"tconstruct:attack_damage\":3.3000002f,\"tconstruct:attack_speed\":1.01115f,\"tconstruct:draw_speed\":1.03f,\"tconstruct:durability\":944.99994f,\"tconstruct:harvest_tier\":\"minecraft:diamond\",\"tconstruct:mining_speed\":8.6509495f,\"tconstruct:velocity\":1.03f},tic_volatile_data:{abilities:1,upgrades:3}}",
-    "item:domum_ornamentum:architectscutter",
     "item:domum_ornamentum:four_light{textureData:{}}",
     "#item:minecraft:wooden_slabs",
     "item:createdieselgenerators:chip_wood_beam",
@@ -1113,20 +1508,12 @@
     "item:domum_ornamentum:fancy_light{textureData:{}}",
     {
       "type": "item",
-      "id": "farmersdelight:straw",
-      "amount": 64
-    },
-    "item:touhou_little_maid:sanae_gohei{Damage:0}",
-    "#item:forge:storage_blocks/quartz",
-    {
-      "type": "item",
       "id": "minecraft:gray_wool",
       "amount": 10
     },
     "item:touhou_little_maid:maid_backpack_big",
     "item:touhou_little_maid:maid_backpack_small",
     "item:touhou_little_maid:garage_kit",
-    "item:touhou_little_maid:hakurei_gohei{Damage:0}",
     "item:minecraft:hay_block",
     {
       "type": "item",
@@ -1139,11 +1526,6 @@
     "item:tconstruct:amethyst_bronze_block",
     "item:minecraft:bamboo_block",
     "item:storagedrawers:drawer_puller",
-    {
-      "type": "item",
-      "id": "minecraft:bamboo",
-      "amount": 474
-    },
     "item:butchercraft:gelatin",
     "item:butchercraft:lard",
     {
@@ -1161,17 +1543,14 @@
     "item:create:honey_bucket",
     "item:butchercraft:rabbit_skull_head_item",
     "item:butchercraft:rabbit_gold_head_item",
-    "fluid:tconstruct:meat_soup",
     {
       "type": "tag",
       "registry": "minecraft:fluid",
       "id": "tconstruct:meat_soup",
       "amount": 500
     },
-    "item:butchercraft:blood_fluid_bucket",
     "item:butchercraft:blood_fluid_bottle",
     "item:minecraft:rabbit_foot",
-    "item:butchercraft:butcher_block_block_item",
     "item:minecraft:fermented_spider_eye",
     "item:minecraft:potion{Potion:\"minecraft:harming\"}",
     "item:ceramicbucket:ceramic_bucket",
@@ -1203,7 +1582,6 @@
       "id": "create:golden_sheet",
       "amount": 3
     },
-    "item:create:wrench",
     {
       "type": "fluid",
       "id": "tconstruct:honey",
@@ -1233,7 +1611,6 @@
     },
     "item:botania:spawner_mover",
     "#item:forge:rods",
-    "item:tacz:ammo_box{AmmoCount:432,AmmoId:\"tacz:50ae\",Level:2}",
     "item:minecraft:ancient_debris",
     {
       "type": "item",
@@ -1258,7 +1635,6 @@
       "id": "forge:dusts/netherite",
       "amount": 2
     },
-    "item:ironchest:iron_to_gold_chest_upgrade",
     {
       "type": "item",
       "id": "create:fluid_tank",
@@ -1270,7 +1646,6 @@
       "amount": 6
     },
     "item:minecraft:nether_star",
-    "item:minecraft:clock",
     "item:minecraft:barrel",
     "#item:minecraft:planks",
     "item:mekanism:basic_fluid_tank{mekData:{FluidTanks:[{Tank:0b,stored:{Amount:32000,FluidName:\"tconstruct:molten_iron\"}}],Items:[],editMode:0,owner:[I;-972773260,18042270,-1983813019,796942422],securityMode:0}}",
@@ -1329,7 +1704,6 @@
     "item:miners_delight:copper_pot",
     "#item:forge:gems",
     "item:tconstruct:gem_cast",
-    "item:minecraft:enchanting_table",
     {
       "type": "item",
       "id": "tconstruct:blaze_head",
@@ -1339,13 +1713,11 @@
     "item:twilightforest:ironwood_chestplate{Damage:0}",
     "item:supplementaries:pancake",
     "item:botania:ender_eye_block",
-    "item:minecraft:stripped_bamboo_block",
     {
       "type": "item",
       "id": "minecraft:melon",
       "amount": 12
     },
-    "item:farmersdelight:canvas",
     "item:farmersdelight:basket",
     "item:miners_delight:sticky_basket",
     "item:farmersdelight:wild_rice",
@@ -1410,7 +1782,6 @@
     "item:create_power_loader:empty_brass_chunk_loader",
     "item:minecraft:respawn_anchor",
     "item:create:hose_pulley",
-    "item:minecraft:dried_kelp_block",
     "item:butchercraft:gold_bunny_tail{Damage:0}",
     {
       "type": "item",
@@ -1504,7 +1875,6 @@
       "amount": 2
     },
     "#item:forge:glass/colorless",
-    "item:tconstruct:clear_item_frame",
     {
       "type": "item",
       "id": "twilightforest:encased_towerwood",
@@ -1513,7 +1883,6 @@
     "item:minecraft:skeleton_skull",
     "#item:forge:ingots/brick",
     "item:inventorypets:pet_mickerson{Damage:1}",
-    "item:enchantinginfuser:enchanting_infuser",
     "item:createutilities:void_battery",
     "item:tconstruct:rod_cast",
     {
@@ -1528,8 +1897,6 @@
       "amount": 16
     },
     "item:quark:gunpowder_sack",
-    "item:ironchest:gold_to_diamond_chest_upgrade",
-    "item:ironchest:diamond_to_crystal_chest_upgrade",
     "item:inventorypets:pet_wither{Damage:0}",
     "item:tconstruct:ender_slime_sapling",
     "item:inventorypets:nugget_coal",
@@ -1557,11 +1924,6 @@
     "item:minecraft:sentry_armor_trim_smithing_template",
     "item:mekanism:teleportation_core",
     "item:storagedrawers:detached_drawer{StorageMult:32}",
-    {
-      "type": "item",
-      "id": "tconstruct:pattern",
-      "amount": 2
-    },
     "item:create:mechanical_arm",
     "item:create:brass_ingot",
     "item:twilightforest:knightmetal_ring",
@@ -1569,13 +1931,7 @@
     "item:botania:black_lotus",
     "item:supplementaries:enderman_head",
     "item:tconstruct:enderman_head",
-    {
-      "type": "item",
-      "id": "create:andesite_alloy",
-      "amount": 64
-    },
     "item:inventorypets:pet_sun{Damage:0}",
-    "item:tarotcards:tarot_deck",
     "item:tarotcards:the_magician",
     {
       "type": "item",
@@ -1662,14 +2018,12 @@
     "item:railways:light_gray_slashed_locometal",
     "item:railways:white_iron_wrapped_locometal",
     "item:quark:iron_rod",
-    "item:ironchest:trapped_iron_chest",
     "item:quark:iron_ladder",
     "item:quark:iron_button",
     "item:quark:grate",
     "item:minecraft:iron_bars",
     "item:minecraft:iron_door",
     "item:supplementaries:iron_gate",
-    "item:quark:iron_plate",
     "item:quark:raw_iron_bricks",
     "item:railways:riveted_locometal",
     "item:railways:slashed_locometal",
@@ -1679,8 +2033,6 @@
     "#item:nethersdelight:tools/hunting_tools",
     "item:ends_delight:purpur_knife{Damage:0}",
     "item:ae2:nether_quartz_cutting_knife{Damage:0}",
-    "item:torcherino:double_compressed_torcherino",
-    "item:minecraft:lapis_lazuli",
     "item:thermal:lapis_dust",
     {
       "type": "item",
@@ -1693,209 +2045,193 @@
       "type": "item",
       "id": "minecraft:experience_bottle",
       "amount": 3
-    },
-    "item:minecraft:deepslate",
-    "item:create:sequenced_gearshift",
-    "item:botania:hourglass",
-    "item:supplementaries:hourglass",
-    "item:create:hand_crank",
-    "item:createsifter:brass_mesh",
-    "item:createsifter:sifter",
-    {
-      "type": "item",
-      "id": "create:belt_connector",
-      "nbt": "{FirstPulley:{X:218,Y:68,Z:-64}}",
-      "amount": 16
-    },
-    {
-      "type": "fluid",
-      "id": "tconstruct:molten_debris",
-      "amount": 90
-    },
-    "item:tconstruct:efln_ball",
-    {
-      "type": "fluid",
-      "id": "sophisticatedcore:xp_still",
-      "amount": 0
-    },
-    {
-      "type": "item",
-      "id": "minecraft:netherrack",
-      "amount": 64
-    },
-    "#item:supplementaries:hourglass_dusts",
-    "item:create:cinder_flour",
-    "item:botania:bifrost_perm",
-    "item:botania:shimmerrock",
-    "item:minecraft:rail{__storagedrawers_count:54995}",
-    "item:minecraft:beacon",
-    "item:minecraft:diamond_horse_armor",
-    "item:minecraft:iron_pickaxe{Damage:5,RepairCost:0}",
-    "item:botania:conjuration_catalyst",
-    {
-      "type": "item",
-      "id": "minecraft:dragon_breath",
-      "amount": 4
-    },
-    {
-      "type": "item",
-      "id": "minecraft:item_frame",
-      "amount": 14
-    },
-    "item:minecraft:prismarine_crystals",
-    "item:inventorypets:nugget_ender",
-    "item:ends_delight:ender_pearl_grain",
-    "item:createsifter:advanced_brass_mesh",
-    "item:quark:ancient_fruit",
-    {
-      "type": "item",
-      "id": "minecraft:honey_bottle",
-      "amount": 3
-    },
-    "item:tconstruct:cave_spider_head",
-    "item:supplementaries:pulley_block",
-    "item:botania:speed_up_belt{oldX:200.88527286932936d,oldY:72.0d,oldZ:-79.69999998807907d,speed:0.0f}",
-    "item:tconstruct:skyroot_trapdoor",
-    "item:nethersdelight:propelplant_torch",
-    "item:supplementaries:gold_trapdoor",
-    {
-      "type": "item",
-      "id": "supplementaries:netherite_trapdoor",
-      "amount": 3
-    },
-    "item:minecraft:clay",
-    "item:miners_delight:silverfish_eggs",
-    "item:botania:alchemy_catalyst",
-    "item:mekanism:precision_sawmill",
-    "item:mekanismgenerators:heat_generator",
-    "item:mekanism:metallurgic_infuser",
-    "item:minecraft:furnace",
-    "item:mekanism:dust_steel",
-    {
-      "type": "item",
-      "id": "supplementaries:soap",
-      "amount": 6
-    },
-    "item:supplementaries:ash",
-    {
-      "type": "item",
-      "id": "quark:azalea_planks",
-      "amount": 32
-    },
-    "item:minecraft:white_bed",
-    "item:minecraft:rooted_dirt",
-    "item:minecraft:hanging_roots",
-    {
-      "type": "item",
-      "id": "minecraft:black_dye",
-      "amount": 14
-    },
-    {
-      "type": "item",
-      "id": "twilightforest:fiery_blood",
-      "amount": 10
-    },
-    {
-      "type": "item",
-      "id": "twilightforest:fiery_tears",
-      "amount": 6
-    },
-    "item:butchercraft:cow_head_item",
-    "item:butchercraft:cow_skull_head_item",
-    {
-      "type": "item",
-      "id": "create:dough",
-      "amount": 2
-    },
-    "item:twilightforest:knightmetal_ingot",
-    "item:twilightforest:knightmetal_axe{Damage:0,Enchantments:[{id:\"minecraft:efficiency\",lvl:3s}]}",
-    "item:botania:white_pavement",
-    "item:tconstruct:seared_chute",
-    "item:storagedrawers:drawer_key",
-    "#item:railways:palettes/cycle_groups/base",
-    "item:railways:copper_wrapped_locometal",
-    "#item:railways:palettes/dye_groups/copper_wrapped_slashed",
-    "item:railways:light_gray_copper_wrapped_locometal",
-    "item:storagedrawers:bamboo_half_drawers_1",
-    "item:ftbquests:loot_crate_opener",
-    "item:quark:music_disc_clock",
-    "item:appbot:mana_cell_housing",
-    "item:sophisticatedbackpacks:void_upgrade",
-    "item:sophisticatedbackpacks:backpack",
-    "item:create:encased_fan",
-    "item:minecraft:compass",
-    "item:create:speedometer",
-    "item:create:stressometer",
-    "item:create:andesite_tunnel",
-    "item:create:encased_chain_drive",
-    "item:create_connected:encased_chain_cogwheel",
-    {
-      "type": "item",
-      "id": "minecraft:wither_rose",
-      "amount": 2
-    },
-    "item:create:water_wheel",
-    {
-      "type": "jemi",
-      "uid": "tconstruct:severing"
-    },
-    "item:tconstruct:large_plate{Material:\"tconstruct:amethyst_bronze\"}",
-    "item:botania:monocle",
-    "item:quark:cobblestone_bricks_slab",
-    "item:create:mechanical_drill",
-    "item:create:spout",
-    "item:create:powdered_obsidian",
-    "#item:forge:dusts/obsidian",
-    "item:create:sturdy_sheet",
-    "item:create:copper_casing",
-    "item:create:item_drain",
-    {
-      "type": "item",
-      "id": "create:schematic_table",
-      "amount": 4
-    },
-    "item:createutilities:amethyst_tiles",
-    "item:createutilities:gearcube",
-    "item:createdieselgenerators:oil_barrel",
-    "item:create:sail_frame",
-    "item:create:cart_assembler",
-    {
-      "type": "item",
-      "id": "farmersdelight:tree_bark",
-      "amount": 15
-    },
-    {
-      "type": "item",
-      "id": "create:precision_mechanism",
-      "amount": 3
-    },
-    "item:tconstruct:plate_cast",
-    "item:minecraft:andesite_stairs",
-    "item:quark:andesite_bricks_slab",
-    "item:create:gearshift",
-    "item:create_connected:inverted_gearshift",
-    "item:minecraft:armor_stand",
-    "item:disenchanting:disenchanter",
-    "item:butchercraft:goat_carcass",
-    "item:butchercraft:goat_hide",
-    "item:minecraft:diamond_sword{Damage:0}",
-    "item:farmersdelight:organic_compost",
-    "item:enchantinginfuser:advanced_enchanting_infuser",
-    {
-      "type": "item",
-      "id": "twilightforest:maze_wafer",
-      "amount": 25
-    },
-    {
-      "type": "item",
-      "id": "minecraft:packed_ice",
-      "amount": 21
-    },
-    "item:tacz:ammo_box{Level:1}"
+    }
   ],
   "craft_history": [
-    "clay:soldier/soldier",
+    "kubejs:time_core_into_bottle",
+    "tconstruct:common/glass/vanilla/glass_bottle",
+    "kubejs:time_core",
+    "minecraft:clock",
+    "expandedstorage:diamond_chest",
+    "expandedstorage:gold_chest",
+    "expandedstorage:iron_chest",
+    "quark:building/crafting/chests/chest_revert",
+    "quark:building/crafting/chests/oak_chest",
+    "minecraft:gold_ingot_from_gold_block",
+    "minecraft:iron_ingot_from_iron_block",
+    "minecraft:iron_block",
+    "vintagedelight:salted_salmon",
+    "sophisticatedbackpacks:diamond_backpack",
+    "minecraft:iron_chestplate",
+    "minecraft:iron_helmet",
+    "minecraft:raw_iron",
+    "minecraft:golden_boots",
+    "minecraft:flint_and_steel",
+    "sophisticatedbackpacks:gold_backpack",
+    "sophisticatedbackpacks:iron_backpack",
+    "minecraft:diamond_axe",
+    "minecraft:diamond_pickaxe",
+    "minecraft:crafting_table",
+    "minecraft:oak_planks",
+    "minecraft:cherry_fence",
+    "minecraft:cherry_planks",
+    "minecraft:dye_magenta_carpet",
+    "minecraft:magenta_dye_from_lilac",
+    "minecraft:white_carpet",
+    "minecraft:lantern",
+    "minecraft:iron_nugget",
+    "constructionwand:diamond_wand",
+    "minecraft:warped_slab",
+    "minecraft:warped_planks",
+    "minecraft:gold_nugget",
+    "tconstruct:tables/part_chest",
+    "minecraft:stick",
+    "tconstruct:tables/tinkers_chest",
+    "create:crafting/materials/zinc_ingot_from_decompacting",
+    "mekanism:processing/osmium/ingot/from_block",
+    "thermal:storage/silver_ingot_from_block",
+    "minecraft:cherry_pressure_plate",
+    "minecraft:cherry_stairs",
+    "minecraft:dark_oak_pressure_plate",
+    "minecraft:observer",
+    "minecraft:scaffolding",
+    "minecraft:bucket",
+    "butchercraft:skinning_knife",
+    "butchercraft:bone_saw",
+    "butchercraft:gut_knife",
+    "butchercraft:butcher_knife",
+    "create:crafting/kinetics/framed_glass_door",
+    "minecraft:oak_door",
+    "minecraft:torch",
+    "vintagedelight:salted_cod",
+    "butchercraft:grinder_tip",
+    "minecraft:iron_trapdoor",
+    "minecraft:iron_bars",
+    "butchercraft:grinder",
+    "minecraft:oak_button",
+    "minecraft:iron_sword",
+    "minecraft:hopper",
+    "minecraft:iron_ingot_from_nuggets",
+    "butchercraft:butcherblock",
+    "minecraft:oak_slab",
+    "butchercraft:meat_hook",
+    "minecraft:chain",
+    "minecraft:anvil",
+    "touhou_little_maid:chair",
+    "tconstruct:gadgets/fancy_frame/clear",
+    "minecraft:glass_pane",
+    "storagedrawers:cherry_full_drawers_4",
+    "minecraft:dye_pink_bed",
+    "minecraft:pink_dye_from_pink_petals",
+    "minecraft:gold_ingot_from_nuggets",
+    "minecraft:fishing_rod",
+    "minecraft:cherry_slab",
+    "storagedrawers:emerald_storage_upgrade",
+    "storagedrawers:cherry_full_drawers_2",
+    "quark:tweaks/crafting/utility/chests/oak_chest_wood",
+    "minecraft:stone_bricks",
+    "storagedrawers:oak_full_drawers_1",
+    "minecraft:cherry_fence_gate",
+    "minecraft:cherry_door",
+    "minecraft:cherry_trapdoor",
+    "minecraft:flower_pot",
+    "minecraft:white_concrete_powder",
+    "minecraft:white_dye",
+    "minecraft:bone_meal",
+    "storagedrawers:compacting_half_drawers_2",
+    "minecraft:piston",
+    "create:crafting/kinetics/super_glue",
+    "createdieselgenerators:crafting/hammer",
+    "create:crafting/kinetics/windmill_bearing",
+    "create_connected:crafting/kinetics/large_crank_wheel",
+    "create:crafting/kinetics/millstone",
+    "minecraft:glowstone",
+    "minecraft:quartz_block",
     "minecraft:stonecutter",
+    "bonsaitrees3:bonsaipot",
+    "minecraft:raw_copper",
+    "create:crafting/kinetics/goggles",
+    "minecraft:shears",
+    "create:crafting/kinetics/wrench",
+    "create:crafting/kinetics/depot",
+    "constructionwand:iron_wand",
+    "create:crafting/kinetics/cogwheel",
+    "create:crafting/kinetics/large_cogwheel",
+    "create:crafting/kinetics/shaft",
+    "create:crafting/materials/andesite_alloy_from_zinc",
+    "create:crafting/materials/zinc_nugget_from_decompacting",
+    "create:crafting/kinetics/large_water_wheel",
+    "create:crafting/kinetics/water_wheel",
+    "create:crafting/materials/raw_zinc_block",
+    "create:crafting/materials/raw_zinc",
+    "mekanism:processing/osmium/nugget/from_ingot",
+    "minecraft:raw_gold_block",
+    "minecraft:copper_ingot",
+    "tacz:diamond_ammo_box",
+    "minecraft:clay",
+    "minecraft:raw_copper_block",
+    "minecraft:golden_sword",
+    "vintagedelight:fermenting_jar",
+    "minecraft:iron_boots",
+    "tconstruct:smeltery/sand_cast",
+    "tconstruct:tables/part_builder",
+    "tconstruct:tables/tinker_station",
+    "tconstruct:tables/pattern",
+    "minecraft:cherry_sign",
+    "tacz:gun_smith_table",
+    "quark:building/crafting/iron_plate",
+    "minecraft:coal",
+    "minecraft:birch_planks",
+    "storagedrawers:upgrade_template",
+    "storagedrawers:birch_half_drawers_4",
+    "minecraft:birch_slab",
+    "storagedrawers:birch_full_drawers_2",
+    "minecraft:golden_shovel",
+    "minecraft:coal_block",
+    "tconstruct:smeltery/seared/seared_bricks_from_brick",
+    "tconstruct:smeltery/seared/fuel_gauge",
+    "minecraft:lever",
+    "tconstruct:smeltery/seared/basin",
+    "minecraft:raw_iron_block",
+    "tconstruct:smeltery/seared/drain",
+    "tconstruct:smeltery/seared/chute_retextured",
+    "minecraft:glass_bottle",
+    "minecraft:golden_pickaxe",
+    "minecraft:golden_axe",
+    "mekanismtools:gold_paxel",
+    "minecraft:spruce_boat",
+    "quark:building/crafting/chests/cherry_chest",
+    "minecraft:dark_oak_planks",
+    "mekanism:processing/tin/ingot/from_block",
+    "mekanism:processing/tin/raw_storage_blocks/from_raw",
+    "minecraft:bread",
+    "minecraft:wheat",
+    "minecraft:grindstone",
+    "minecraft:stone_slab",
+    "farmersdelight:onion",
+    "minecraft:spruce_planks",
+    "quark:building/crafting/chests/birch_chest",
+    "aquaculture:gold_fillet_knife",
+    "minecraft:black_bed",
+    "minecraft:oak_boat",
+    "minecraft:emerald",
+    "quark:tweaks/crafting/utility/tools/stone_pickaxe",
+    "minecraft:cobblestone_slab",
+    "minecraft:iron_axe",
+    "minecraft:spruce_trapdoor",
+    "quark:tweaks/crafting/utility/tools/stone_axe",
+    "tconstruct:smeltery/seared/faucet",
+    "tconstruct:smeltery/seared/table",
+    "tconstruct:smeltery/seared/fuel_tank",
+    "ceramicbucket:unfired_clay_bucket",
+    "tconstruct:smeltery/seared/melter",
+    "tconstruct:smeltery/seared/ingot_gauge",
+    "quark:building/crafting/furnaces/cobblestone_furnace",
+    "tconstruct:smeltery/seared/grout_multiple",
+    "minecraft:oak_trapdoor",
+    "minecraft:jungle_boat",
+    "minecraft:jungle_planks",
+    "clay:soldier/soldier",
     "mekanism:cardboard_box",
     "create:crafting/kinetics/filter",
     "sophisticatedbackpacks:stack_upgrade_tier_2",
@@ -1904,8 +2240,6 @@
     "quark:tweaks/crafting/clear_glass",
     "sophisticatedbackpacks:stonecutter_upgrade",
     "minecraft:oak_stairs",
-    "minecraft:oak_planks",
-    "minecraft:raw_copper_block",
     "storagedrawers:controller",
     "minecraft:comparator",
     "minecraft:diamond_block",
@@ -1928,40 +2262,27 @@
     "botania:dye_pink",
     "ae2:network/cables/glass_fluix",
     "storagedrawers:compacting_drawers_2",
-    "minecraft:emerald",
-    "create:crafting/kinetics/depot",
     "minecraft:warped_button",
     "botania:conversions/dragonstone_block_deconstruct",
     "create:crafting/materials/experience_nugget_from_block",
-    "minecraft:stick",
     "minecraft:netherite_upgrade_smithing_template",
     "create:crafting/logistics/brass_funnel",
     "ae2:misc/deconstruction_certus_quartz_block",
     "easy_villagers:auto_trader",
-    "ironchest:chests/gold_diamond_chest",
-    "ironchest:chests/iron_gold_chest",
-    "ironchest:chests/vanilla_iron_chest",
     "ae2:network/blocks/inscribers",
-    "minecraft:piston",
-    "minecraft:torch",
     "create:crafting/kinetics/deployer",
     "create:crafting/kinetics/brass_hand",
     "create:crafting/kinetics/mechanical_press",
     "create:crafting/materials/electron_tube",
     "create:crafting/logistics/brass_tunnel",
-    "minecraft:dye_pink_bed",
-    "ironchest:chests/diamond_crystal_chest",
-    "minecraft:warped_planks",
     "sophisticatedbackpacks:magnet_upgrade",
     "sophisticatedbackpacks:pickup_upgrade",
     "farmersdelight:cake_from_milk_bottle",
     "bucketlib:cake",
-    "minecraft:wheat",
     "minecraft:sugar_from_sugar_cane",
     "tconstruct:smeltery/scorched/scorched_bricks_from_brick",
     "minecraft:campfire",
     "barbequesdelight:grill",
-    "minecraft:iron_trapdoor",
     "minecraft:redstone",
     "railways:crafting/handcar",
     "create:crafting/kinetics/contraption_controls",
@@ -1971,14 +2292,9 @@
     "ends_delight:non_hatchable_dragon_egg",
     "minecraft:end_crystal",
     "farmersdelight:rice",
-    "kubejs:kjs/time_core",
     "minecraft:bowl",
-    "quark:building/crafting/chests/chest_revert",
     "quark:tweaks/crafting/utility/chests/warped_chest_wood",
     "botania:dye_red",
-    "storagedrawers:emerald_storage_upgrade",
-    "bonsaitrees3:bonsaipot",
-    "minecraft:quartz_block",
     "tconstruct:common/tinkers_gadgetry",
     "tconstruct:common/fantastic_foundry",
     "tconstruct:smeltery/scorched/nether_grout",
@@ -1991,33 +2307,19 @@
     "minecraft:blue_dye",
     "botania:dye_cyan",
     "botania:petal_cyan_double",
-    "tconstruct:smeltery/seared/seared_bricks_from_brick",
-    "tconstruct:smeltery/seared/fuel_gauge",
     "create:crafting/logistics/andesite_funnel",
     "storagedrawers:compacting_drawers_3",
     "minecraft:redstone_torch",
-    "minecraft:oak_slab",
-    "storagedrawers:upgrade_template",
-    "butchercraft:meat_hook",
-    "minecraft:chain",
-    "minecraft:crafting_table",
     "minecraft:dye_pink_wool",
     "minecraft:pink_dye_from_red_white_dye",
-    "minecraft:white_dye",
     "minecraft:bone_meal_from_bone_block",
     "botania:petal_red_double",
-    "minecraft:gold_ingot_from_gold_block",
     "easy_piglins:barterer",
     "fruitsdelight:lemon_seeds",
     "minecraft:golden_chestplate",
     "tconstruct:common/materials/manyullyn_ingot_from_block",
-    "minecraft:lever",
-    "minecraft:white_carpet",
-    "quark:building/crafting/chests/oak_chest",
     "botania:dye_white",
     "botania:dye_black",
-    "minecraft:copper_ingot",
-    "minecraft:iron_ingot_from_iron_block",
     "inventorypets:nugget_emerald",
     "minecraft:note_block",
     "domum_ornamentum:architectscutter",
@@ -2029,25 +2331,16 @@
     "tconstruct:tables/crafting_station",
     "storagedrawers:bamboo_full_drawers_4",
     "minecraft:bamboo_planks",
-    "quark:tweaks/crafting/utility/chests/oak_chest_wood",
     "tconstruct:common/materials/amethyst_bronze_ingot_from_block",
     "minecraft:bamboo_block",
     "storagedrawers:bamboo_trim",
     "create:crafting/kinetics/smart_chute",
     "create:crafting/kinetics/portable_storage_interface",
-    "create:crafting/kinetics/wrench",
-    "create:crafting/kinetics/cogwheel",
-    "minecraft:raw_copper",
-    "minecraft:iron_block",
-    "minecraft:coal_block",
     "mekanism:enrichment_chamber",
     "mekanism:steel_casing",
     "minecraft:minecart",
     "create:crafting/kinetics/fluid_tank",
-    "minecraft:kjs/torcherino_torcherino",
-    "minecraft:clock",
     "minecraft:barrel",
-    "minecraft:diamond_pickaxe",
     "thermal:storage/gunpowder_from_block",
     "twilightforest:compressed_blocks/reversed/ironwood_block_ingot",
     "create:crafting/kinetics/mechanical_harvester",
@@ -2079,7 +2372,6 @@
     "storagedrawers:void_upgrade",
     "mekanism:chemical_tank/basic",
     "mekanismgenerators:generator/gas_burning",
-    "mekanism:processing/osmium/ingot/from_block",
     "mekanism:electrolytic_separator",
     "mekanism:electrolytic_core",
     "mekanism:transmitter/pressurized_tube/basic",
@@ -2093,8 +2385,6 @@
     "mekanism:crusher",
     "enchantinginfuser:advanced_enchanting_infuser",
     "quark:building/crafting/compressed/gunpowder_sack",
-    "ironchest:upgrades/gold_to_diamond_chest_upgrade",
-    "ironchest:upgrades/iron_to_gold_chest_upgrade",
     "inventorypets:wither_pet",
     "minecraft:powered_rail",
     "storagedrawers:detached_drawer",
@@ -2103,8 +2393,6 @@
     "create:crafting/kinetics/white_sail",
     "twilightforest:wood/twilight_oak_planks",
     "create:crafting/materials/andesite_alloy",
-    "minecraft:iron_nugget",
-    "minecraft:stone_bricks",
     "inventorypets:sun_pet",
     "tarotcards:tarot_deck",
     "create:crafting/kinetics/steam_engine",
@@ -2112,7 +2400,6 @@
     "butchercraft:lamb_block_to_scraps",
     "createdieselgenerators:crafting/oil_scanner",
     "storagedrawers:fill_level_upgrade",
-    "minecraft:iron_ingot_from_nuggets",
     "mekanism:fluid_tank/basic",
     "constructionwand:core_destruction",
     "minecraft:bone_block",
@@ -2129,14 +2416,12 @@
     "quark:building/crafting/compressed/apple_crate_uncompress",
     "quark:building/crafting/compressed/glowberry_sack_uncompress",
     "minecraft:iron_leggings",
-    "minecraft:clay",
     "minecraft:cookie",
     "mekanism:precision_sawmill",
     "mekanismgenerators:generator/heat",
     "mekanism:metallurgic_infuser",
     "quark:building/crafting/furnaces/mixed_furnace",
     "quark:world/crafting/woodsets/azalea/planks",
-    "tconstruct:smeltery/seared/chute_retextured",
     "storagedrawers:drawer_key",
     "storagedrawers:oak_full_drawers_2",
     "sophisticatedbackpacks:backpack",
@@ -2146,75 +2431,47 @@
     "create:crafting/kinetics/gearbox",
     "create:crafting/kinetics/encased_chain_drive",
     "tconstruct:common/materials/cobalt_ingot_from_block",
-    "create:crafting/kinetics/large_cogwheel",
-    "create:crafting/kinetics/shaft",
     "create:crafting/kinetics/mechanical_drill",
     "create:crafting/kinetics/spout",
     "create:crafting/materials/brass_ingot_from_decompacting",
     "create:crafting/kinetics/item_drain",
     "create:crafting/kinetics/chute",
-    "create:crafting/materials/andesite_alloy_from_zinc",
-    "create:crafting/materials/zinc_nugget_from_decompacting",
-    "create:crafting/materials/zinc_ingot_from_decompacting",
     "create:crafting/kinetics/gearshift",
     "createutilities:shaped/lshaped_gearbox_mirrored",
     "minecraft:armor_stand",
     "disenchanting:disenchanter",
     "minecraft:enchanting_table",
-    "minecraft:coal",
     "enchantinginfuser:enchanting_infuser",
     "twilightforest:twilight_oak_boat",
-    "tacz:diamond_ammo_box",
     "minecraft:lapis_lazuli",
     "tacz:gunpowder",
     "tconstruct:common/flint",
     "thermal:storage/raw_nickel_block",
     "minecraft:kjs/createcafe_coffee_fruit",
-    "minecraft:glowstone",
     "minecraft:redstone_block",
-    "minecraft:spruce_planks",
-    "butchercraft:butcherblock",
-    "tacz:gun_smith_table",
     "create:crafting/kinetics/belt_connector",
     "create_connected:crafting/kinetics/empty_fan_catalyst",
     "create:crafting/kinetics/encased_fan",
     "create:crafting/kinetics/propeller",
     "create:crafting/materials/rose_quartz",
-    "minecraft:raw_iron",
-    "minecraft:raw_iron_block",
     "tconstruct:common/materials/cobalt_block_from_ingots",
     "minecraft:jungle_slab",
     "create_enchantment_industry:crafting/disenchanter",
-    "minecraft:jungle_planks",
     "minecraft:jungle_button",
     "create:crafting/kinetics/mechanical_crafter",
     "create:crafting/materials/sand_paper",
-    "tconstruct:smeltery/sand_cast",
     "create:crafting/kinetics/speedometer",
-    "create:crafting/kinetics/goggles",
     "botania:dye_magenta",
     "botania:dye_orange",
-    "create:crafting/kinetics/super_glue",
     "minecraft:raw_gold",
     "farmersdelight:tomato",
     "farmersdelight:cabbage",
     "minecraft:lapis_block",
-    "sophisticatedbackpacks:iron_backpack",
-    "minecraft:shears",
-    "butchercraft:gut_knife",
-    "butchercraft:bone_saw",
-    "butchercraft:skinning_knife",
-    "butchercraft:butcher_knife",
     "tconstruct:common/materials/rose_gold_ingot_from_block",
     "tconstruct:common/materials/raw_cobalt_block_from_raws",
     "tconstruct:tables/cast_chest",
-    "ceramicbucket:unfired_clay_bucket",
     "tconstruct:smeltery/seared/heater",
-    "minecraft:oak_boat",
-    "tconstruct:tables/tinker_station",
-    "tconstruct:tables/part_builder",
-    "tconstruct:tables/crafting_station_from_logs",
-    "tconstruct:tables/pattern"
+    "tconstruct:tables/crafting_station_from_logs"
   ],
   "recipe_defaults": {
     "added": [],

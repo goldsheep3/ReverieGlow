@@ -2,7 +2,12 @@ ServerEvents.recipes(event => {
   // 应用能源2初期合成-必然要先探索陨石的限制
   event.replaceInput(
     { id: 'ae2:network/blocks/inscribers' },
-    'minecraft:copper_ingot',
+    'minecraft:copper_ingot'  ,
+    'ae2:certus_quartz_crystal'
+  )
+  event.replaceInput(
+    { id: 'ae2:network/blocks/crystal_processing_charger' },
+    'minecraft:copper_ingot'  ,
     'ae2:certus_quartz_crystal'
   )
 
@@ -12,13 +17,14 @@ ServerEvents.recipes(event => {
     [
       'AAA',
       'BCB',
-      'D D'
+      'DED'
     ],
     {
       A: 'minecraft:gold_ingot',
       B: 'minecraft:diamond',
       C: 'minecraft:clock',
-      D: 'minecraft:lapis_lazuli'
+      D: 'minecraft:lapis_lazuli',
+      E: 'minecraft:snowball'
     }
   ).id('kubejs:time_core')
   event.shaped(
@@ -42,12 +48,16 @@ ServerEvents.recipes(event => {
     ],
     {
       A: 'kubejs:compressed_time_core',
-      B: 'minecraft:dragon_egg'
+      B: 'kubejs:dragon_egg_fragment'
     }
   ).id('kubejs:double_compressed_time_core')
+  // 龙蛋碎片
+  event.shapeless(
+    '4x kubejs:dragon_egg_fragment', ['minecraft:dragon_egg']
+  ).id('kubejs:dragon_egg_to_fragment')
 
   // 时间之瓶的合成修改
-  event.remove({ id: 'tiab:time_in_a_bottle' })  // 删除原有的时间之瓶配方
+  event.remove({ id: 'tiab:time_in_a_bottle' })  // 删除原有的时间之瓶配方，因为雪球的关系多了点难度
   event.shapeless(
     'tiab:time_in_a_bottle', ['kubejs:time_core', 'minecraft:glass_bottle']
   ).id('kubejs:time_core_into_bottle')

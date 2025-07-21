@@ -5,4 +5,6 @@ StartupEvents.registry('item', event => {
         .displayName('压缩时间核心')
     event.create('double_compressed_time_core')
         .displayName('两倍压缩时间核心')
+    event.create('dragon_egg_fragment')
+        .displayName('龙蛋碎片')
 })

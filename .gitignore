@@ -29,3 +29,5 @@ map exports/
 kubejs/*/jsconfig.json/
 kubejs/README.txt
 _update_pack/
+
+config/yes_steve_model/custom

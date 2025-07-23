@@ -1,17 +1,48 @@
-// 机械动力：矿石开掘
-
-// 物品熔化
-// 需求：匠魂3
-const tic = global.tic_lib
-
+/**
+ * "@minecraft"
+ */
 ServerEvents.recipes(event => {
 
     // 删除水的矿井
-    event.remove({ id: 'createoreexcavation:ore_vein_type/water' })
-    event.remove({ id: 'createoreexcavation:extractor/water' })
+    event.remove({ id: 'createoreexcavation:ore_vein_type/water' });
+    event.remove({ id: 'createoreexcavation:extractor/water' });
+
+    // 钻石/绿宝石/红石原石块的合成与逆合成
+    // todo 处理还没做
+    event.shaped('kubejs:raw_diamond_block',
+        ['AAA', 'AAA', 'AAA'],
+        { A: 'createexcavation:raw_diamond' }
+    ).id('kubejs:raw_diamond_block');
+    event.shaped('kubejs:raw_emerald_block',
+        ['AAA', 'AAA', 'AAA'],
+        { A: 'createexcavation:raw_emerald' }
+    ).id('kubejs:raw_emerald_block');
+    event.shaped('kubejs:raw_redstone_block',
+        ['AAA', 'AAA', 'AAA'],
+        { A: 'createexcavation:raw_redstone' }
+    ).id('kubejs:raw_redstone_block');
+    event.shapeless('9x createexcavation:raw_diamond',
+        ['kubejs:raw_diamond_block']
+    ).id('kubejs:raw_diamond_from_block');
+    event.shapeless('9x createexcavation:raw_emerald',
+        ['kubejs:raw_emerald_block']
+    ).id('kubejs:raw_emerald_from_block');
+    event.shapeless('9x createexcavation:raw_redstone',
+        ['kubejs:raw_redstone_block']
+    ).id('kubejs:raw_redstone_from_block');
+
+})
+
+/**
+ * "@tconstruct"
+ */
+ServerEvents.recipes(event => {
+    
+    const tic = global.tconstructLib(event);
+
     // 原添加钻石/绿宝石原石的匠魂处理
-    event.custom(tic.melting({ item: 'createoreexcavation:raw_diamond' }, { fluid: 'tconstruct:molten_diamond', amount: 100 }, 1450, 100))
-    event.custom(tic.melting({ item: 'createoreexcavation:raw_emerald' }, { fluid: 'tconstruct:molten_emerald', amount: 100 }, 934, 73))
+    tic.melting('createoreexcavation:raw_diamond', '100mb tconstruct:molten_diamond', 1450, 100).id('kubejs:tconstruct/melting/raw_diamond');
+    tic.melting('createoreexcavation:raw_emerald', '100mb tconstruct:molten_emerald', 934, 73).id('kubejs:tconstruct/melting/raw_emerald');
 
     // 红石原石的mek粉碎处理
     event.custom({
@@ -39,7 +70,6 @@ ServerEvents.recipes(event => {
         stress_value // 应力需求
     ) {
         const itemParts = item.split(':')
-        const modId = itemParts[0]
         const itemName = itemParts[1] || item
         const veinId = `kubejs:ore_excavation_vein/${itemName}`
         const drillingId = `kubejs:ore_excavation_drilling/${itemName}`

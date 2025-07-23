@@ -1,6 +1,41 @@
 {
-  "favorites": [],
+  "favorites": [
+    {
+      "stack": "item:cuisinedelight:meat_platter"
+    }
+  ],
   "lookup_history": [
+    "item:minecraft:redstone_ore",
+    "item:createoreexcavation:netherite_drill",
+    "item:createoreexcavation:diamond_drill",
+    "item:createoreexcavation:drill",
+    "item:expandedstorage:obsidian_to_netherite_conversion_kit",
+    "item:minecraft:spider_eye",
+    "item:expandedstorage:gold_to_netherite_conversion_kit",
+    "item:expandedstorage:iron_to_netherite_conversion_kit",
+    "item:expandedstorage:wood_to_netherite_conversion_kit",
+    "item:expandedstorage:copper_to_netherite_conversion_kit",
+    "item:expandedstorage:diamond_to_netherite_conversion_kit",
+    "item:minecraft:smithing_table",
+    "item:sophisticatedbackpacks:smithing_upgrade",
+    "item:extrabotany:stonesia",
+    "item:mekanism:tin_ore",
+    "item:create:crushed_raw_tin",
+    "item:supplementaries:enderman_head",
+    "item:tconstruct:enderman_head",
+    {
+      "type": "fluid",
+      "id": "tconstruct:molten_ender",
+      "amount": 500
+    },
+    "item:farmersdelight:diamond_knife{Damage:0}",
+    "item:create:crushed_raw_iron",
+    "item:minecraft:verdant_froglight",
+    "item:supplementaries:rope",
+    "item:ticex:incomparable_core",
+    "item:cuisinedelight:fried_pasta",
+    "item:createutilities:lshaped_gearbox",
+    "item:createutilities:gearcube",
     {
       "type": "item",
       "id": "mekanism:raw_tin",
@@ -48,7 +83,6 @@
     },
     "item:tiab:time_in_a_bottle{storedTime:9216000,totalAccumulatedTime:9216000}",
     "item:minecraft:ochre_froglight",
-    "item:minecraft:verdant_froglight",
     "item:minecraft:pearlescent_froglight",
     {
       "type": "item",
@@ -244,12 +278,10 @@
     "item:ae2:certus_quartz_dust",
     "item:ae2:energy_acceptor",
     "item:ae2:cable_energy_acceptor",
-    "item:createutilities:lshaped_gearbox",
     "item:create:gearshift",
     "item:create_connected:inverted_gearshift",
     "item:create:gantry_carriage",
     "item:create:andesite_casing",
-    "item:createutilities:gearcube",
     "item:create:large_cogwheel",
     "item:create:rotation_speed_controller",
     "item:create_connected:six_way_gearbox",
@@ -433,7 +465,6 @@
       "id": "minecraft:warped_slab",
       "amount": 26
     },
-    "item:expandedstorage:diamond_to_netherite_conversion_kit",
     "item:expandedstorage:netherite_chest",
     "item:expandedstorage:iron_chest",
     "item:expandedstorage:old_iron_chest",
@@ -741,11 +772,6 @@
       "id": "minecraft:feather",
       "amount": 11
     },
-    {
-      "type": "item",
-      "id": "minecraft:spider_eye",
-      "amount": 2
-    },
     "item:minecraft:brick",
     "item:ceramicbucket:ceramic_bucket{Fluid:{Amount:1000,FluidName:\"tconstruct:molten_clay\"}}",
     "item:tconstruct:seared_heater",
@@ -795,9 +821,6 @@
       "amount": 0
     },
     "item:create_connected:fan_smoking_catalyst",
-    "item:coffee_delight:berries_wafer",
-    "item:coffee_delight:moka_pot",
-    "item:coffee_delight:moka_top",
     "item:itemfilters:always_true",
     "#item:itemfilters:filters",
     "item:itemfilters:and",
@@ -807,7 +830,6 @@
     "item:patchouli:guide_book{\"patchouli:book\":\"tofucraft:tofu_book\"}",
     "item:createsifter:brass_sifter",
     "item:miners_delight:bat_wing",
-    "item:coffee_delight:coffee_berries",
     "item:createcafe:coffee_beans",
     "item:createcafe:coffee_fruit",
     "item:create:filter",
@@ -1495,7 +1517,6 @@
     "item:botania:blaze_block",
     "item:touhou_little_maid:white_fox_scroll",
     "item:touhou_little_maid:red_fox_scroll",
-    "item:farmersdelight:diamond_knife{Damage:0,RepairCost:0}",
     "item:minecraft:stripped_cherry_wood",
     "item:minecraft:chainmail_chestplate{Damage:0,RepairCost:0,display:{Name:\u0027{\"text\":\"Ancient Chestplate\"}\u0027}}",
     "item:twilightforest:diamond_minotaur_axe{Damage:0}",
@@ -1631,7 +1652,6 @@
     "item:botania:lens_normal",
     "item:botania:lens_explosive",
     "item:botania:rune_envy",
-    "item:sophisticatedbackpacks:smithing_upgrade",
     "item:botania:reach_ring{baubleUUID:[I;-2062258116,-455718496,-1994949412,-54737101]}",
     "item:quark:vertical_jungle_planks",
     "item:mythicbotany:mjoellnir",
@@ -1853,12 +1873,6 @@
     "item:sophisticatedbackpacks:battery_upgrade",
     "item:storagedrawers:remote_upgrade",
     "item:storagedrawers:remote_group_upgrade{}",
-    {
-      "type": "item",
-      "id": "create:crushed_raw_iron",
-      "amount": 64
-    },
-    "item:minecraft:smithing_table",
     "item:sophisticatedbackpacks:diamond_backpack{contentsUuid:[I;1439094974,-732085729,-1625405012,-40638954],inventorySlots:108,renderInfo:{upgradeItems:[{Count:1b,id:\"sophisticatedbackpacks:stack_upgrade_tier_1\"},{Count:1b,id:\"sophisticatedbackpacks:stack_upgrade_tier_1\"},{Count:1b,id:\"sophisticatedbackpacks:stack_upgrade_tier_1\"},{Count:1b,id:\"minecraft:air\"},{Count:1b,id:\"minecraft:air\"}]},sortBy:\"mod\",upgradeSlots:5}",
     "item:create_enchantment_industry:experience_rotor",
     {
@@ -1965,28 +1979,7 @@
     "item:interiors:brown_chair",
     "item:interiors:brown_floor_chair",
     "item:mekanismgenerators:gas_burning_generator",
-    "item:mekanism:basic_pressurized_tube",
-    "item:thermal:iron_dust",
-    "#item:forge:dusts/iron",
-    {
-      "type": "item",
-      "id": "thermal:electrum_dust",
-      "amount": 2
-    },
-    "item:mekanism:dust_gold",
-    "#item:forge:dusts/gold",
-    "item:infinitesource:infinite_water_source_block",
-    "item:mekanism:pressurized_reaction_chamber",
-    "item:mekanism:dynamic_tank",
-    "item:mekanism:basic_chemical_tank",
-    {
-      "type": "item",
-      "id": "vintagedelight:vine_tile",
-      "amount": 6
-    },
-    "item:vintagedelight:stripped_magic_vine_block",
-    "item:vintagedelight:stripped_magic_vine",
-    "item:ae2:blue_covered_dense_cable"
+    "item:mekanism:basic_pressurized_tube"
   ],
   "craft_history": [
     "sophisticatedbackpacks:smelting_upgrade",
@@ -2450,7 +2443,6 @@
     "tacz:gunpowder",
     "tconstruct:common/flint",
     "thermal:storage/raw_nickel_block",
-    "minecraft:kjs/createcafe_coffee_fruit",
     "minecraft:redstone_block",
     "create:crafting/kinetics/belt_connector",
     "create_connected:crafting/kinetics/empty_fan_catalyst",
@@ -2478,12 +2470,12 @@
   ],
   "recipe_defaults": {
     "added": [
-      "kubejs:time_core",
-      "kubejs:compressed_torcherino",
-      "kubejs:torcherino",
       "kubejs:double_compressed_time_core",
+      "kubejs:double_compressed_torcherino",
+      "kubejs:compressed_torcherino",
       "kubejs:compressed_time_core",
-      "kubejs:double_compressed_torcherino"
+      "kubejs:time_core",
+      "kubejs:torcherino"
     ],
     "tags": {},
     "resolutions": {},

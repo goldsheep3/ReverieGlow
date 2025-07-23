@@ -1,198 +1,245 @@
-const tic_lib = {
-
-    /**
-     * @description 匠魂：合金配方
-     * 
-     * @param {array[Object]} input 输入内容对象数组
-     * @param {Object} output 输出内容对象
-     * @param {number} temperature 合金所需温度 (固体800; 熔岩1000; 烈焰血1500) 
-     * 
-     * @return {Object} `event.custom()`所接受的对象
-     */
-    alloy: function (input, output, temperature) {
-        const result = new Object();
-        result.type = "tconstruct:alloy";
-        result.inputs = input;
-        result.result = output;
-        result.temperature = temperature;
-        return result;
-    },
-    /**
-     * @description 匠魂：铸件台配方
-     * 
-     * @param {Object} input 输入内容对象
-     * @param {Object | string} output 输出内容对象
-     * @param {Object} cast 铸模内容对象
-     * @param {boolean} consumed 铸模是否消耗
-     * @param {number} time 固化时间 (tick, 铁锭=60)
-     * 
-     * @return {Object} `event.custom()`所接受的对象
-     */
-    casting_table: function (input, output, cast, consumed, time) {
-        const result = new Object();
-        result.type = "tconstruct:casting_table";
-        result.fluid = input;
-        result.result = output;
-        result.cooling_time = parseInt(time);
-        if (cast) {
-            result.cast = cast;
-            result.cast_consumed = consumed;
-        };
-        return result;
-    },
-    /**
-     * @description 匠魂：铸造盆配方
-     * 
-     * @param {Object} input 输入内容对象
-     * @param {Object | string} output 输出内容对象
-     * @param {Object} cast 铸模内容对象
-     * @param {boolean} consumed 铸模是否消耗
-     * @param {number} time 固化时间 (tick, 铁块=180)
-     * 
-     * @return {Object} `event.custom()`所接受的对象
-     */
-    casting_basin: function (input, output, cast, consumed, time) {
-        const result = new Object();
-        result.type = "tconstruct:casting_basin";
-        result.fluid = input;
-        result.result = output;
-        result.cooling_time = parseInt(time);
-        if (cast) {
-            result.cast = cast;
-            result.cast_consumed = consumed;
-        };
-        return result;
-    },
-    /**
-     * @description 匠魂：熔化/熔铸配方
-     * 
-     * @param {Object} input 输入内容对象
-     * @param {Object} output 输出内容对象
-     * @param {number} temperature 熔化所需温度 (固体800; 熔岩1000; 烈焰血1500) 
-     * @param {number} time 熔化所需时间 (5tick, 通常锭=46)
-     * @param {array[Object]} foundry_output 熔铸炉额外数输出内容对象数组
-     * 
-     * @return {Object} `event.custom()`所接受的对象
-     */
-    melting: function (input, output, temperature, time, foundry_output) {
-        const result = new Object();
-        result.type = "tconstruct:melting";
-        result.ingredient = input;
-        result.result = output;
-        result.temperature = temperature;
-        result.time = parseInt(time);
-        if (foundry_output) {
-            result.byproducts = foundry_output
+const tconstructLib = function(event) {
+    // 辅助解析函数
+    function parseIngredientOrFluid(val) {
+        if (typeof val === "string") {
+            val = val.trim();
+            // 物品标签
+            if (val.startsWith("#")) {
+                let tag = val.replace(/^#/, "");
+                let count = 1;
+                if (tag.match(/^\d+x /)) {
+                    count = parseInt(tag.split("x ")[0]);
+                    tag = tag.split("x ")[1];
+                }
+                return count > 1 ? { tag: tag, count: count } : { tag: tag };
+            }
+            // 物品
+            if (val.match(/^\d*x /) || val.match(/^1x /) || val.match(/^[a-zA-Z0-9_]+:/)) {
+                let m = val.match(/^(\d*)x ([^ ]+)$/);
+                if (m) {
+                    let count = m[1] ? parseInt(m[1]) : 1;
+                    let item = m[2];
+                    return count > 1 ? { item: item, count: count } : { item: item };
+                }
+                // 直接物品id
+                if (val.match(/^[a-zA-Z0-9_]+:/)) {
+                    return { item: val };
+                }
+            }
+            // 流体
+            if (val.match(/^\d*mb /)) {
+                let m = val.match(/^(\d*)mb ([^ ]+)$/);
+                let amount = m[1] ? parseInt(m[1]) : 1;
+                let fluid = m[2];
+                return { fluid: fluid, amount: amount };
+            }
         }
-        return result;
+        // 已是对象直接返回
+        return val;
     }
 
-}
+    return {
+        /**
+         * @description 匠魂：合金配方
+         * @param {Array<Object|string>} inputs 输入内容对象数组或字符串数组
+         * @param {Object|string} output 输出内容对象或字符串
+         * @param {number} temperature 合金所需温度
+         */
+        alloy: function(inputs, output, temperature) {
+            var parsedInputs;
+            if (Array.isArray(inputs)) {
+                parsedInputs = [];
+                for (var i = 0; i < inputs.length; i++) {
+                    parsedInputs.push(parseIngredientOrFluid(inputs[i]));
+                }
+            } else {
+                parsedInputs = [parseIngredientOrFluid(inputs)];
+            }
+            const result = {
+                type: "tconstruct:alloy",
+                inputs: parsedInputs,
+                result: parseIngredientOrFluid(output),
+                temperature: temperature
+            };
+            return event.custom(result);
+        },
+        /**
+         * @description 匠魂：铸件台配方
+         * @param {Object|string} fluidInput 熔融流体内容对象或字符串
+         * @param {Object|string} itemOutput 输出内容对象或字符串
+         * @param {Object|string} cast 铸模内容对象或字符串
+         * @param {boolean} castConsumed 铸模是否消耗
+         * @param {number} coolingTime 固化时间 (tick)
+         */
+        castingTable: function(fluidInput, itemOutput, cast, castConsumed, coolingTime) {
+            const result = {
+                type: "tconstruct:casting_table",
+                fluid: parseIngredientOrFluid(fluidInput),
+                result: parseIngredientOrFluid(itemOutput),
+                cooling_time: parseInt(coolingTime)
+            };
+            if (cast) {
+                result.cast = parseIngredientOrFluid(cast);
+                result.cast_consumed = castConsumed;
+            }
+            return event.custom(result);
+        },
+        /**
+         * @description 匠魂：铸造盆配方
+         * @param {Object|string} fluidInput 熔融流体内容对象或字符串
+         * @param {Object|string} itemOutput 输出内容对象或字符串
+         * @param {Object|string} cast 铸模内容对象或字符串
+         * @param {boolean} castConsumed 铸模是否消耗
+         * @param {number} coolingTime 固化时间 (tick)
+         */
+        castingBasin: function(fluidInput, itemOutput, cast, castConsumed, coolingTime) {
+            const result = {
+                type: "tconstruct:casting_basin",
+                fluid: parseIngredientOrFluid(fluidInput),
+                result: parseIngredientOrFluid(itemOutput),
+                cooling_time: parseInt(coolingTime)
+            };
+            if (cast) {
+                result.cast = parseIngredientOrFluid(cast);
+                result.cast_consumed = castConsumed;
+            }
+            return event.custom(result);
+        },
+        /**
+         * @description 匠魂：熔化/熔铸配方
+         * @param {Object|string} itemInput 输入内容对象或字符串
+         * @param {Object|string} fluidOutput 输出内容对象或字符串
+         * @param {number} temperature 熔化所需温度
+         * @param {number} meltingTime 熔化所需时间
+         * @param {Array<Object|string>} byproducts 熔铸炉额外输出内容对象数组或字符串数组
+         */
+        melting: function(itemInput, fluidOutput, temperature, meltingTime, byproducts) {
+            const result = {
+                type: "tconstruct:melting",
+                ingredient: parseIngredientOrFluid(itemInput),
+                result: parseIngredientOrFluid(fluidOutput),
+                temperature: temperature,
+                time: parseInt(meltingTime)
+            };
+            if (byproducts) {
+                result.byproducts = Array.isArray(byproducts)
+                    ? byproducts.map(parseIngredientOrFluid)
+                    : [parseIngredientOrFluid(byproducts)];
+            }
+            return event.custom(result);
+        }
+    };
+};
 
-const tic_morelib = {
+const tconstructHelper = function(event) {
+    const lib = tconstructLib(event); // 修正：获取对象实例
+    return {
+        /**
+         * @description 浇筑配方快捷函数（fluid -> item）
+         */
+        castingFluidToItem: function(fluid, baseAmount, ingot, block, blockCount, nugget, nuggetCount, plate, timeMultiplier) {
+            const baseTime = 60;
+            if (!baseAmount) baseAmount = 90;
+            if (!timeMultiplier) timeMultiplier = 1;
+            
+            // 辅助获取物品名
+            function getName(item) {
+                if (!item) return "";
+                if (typeof item === "string") {
+                    let arr = item.split(":");
+                    return arr.length === 2 ? arr[1] : item;
+                }
+                if (item.item) return getName(item.item);
+                return "";
+            }
 
-    /**
-     * @description **匠魂** 锭、块、粒、板浇筑配方快捷函数 *item to fluid*
-     * 
-     * @param {Internal.RecipesEventJS} event `ServerEvents.recipes`事件
-     * @param {Object} fluid 熔融流体内容对象
-     * @param {number} base_amount 每锭mB值（默认为90）
-     * @param {Object | string} ingot_item 锭内容对象
-     * @param {Object | string} block_item 块内容对象
-     * @param {number} block_number 块压缩等级（几个锭一个块）（默认为9）
-     * @param {Object | string} nugget_item 粒内容对象
-     * @param {number} nugget_number 粒压缩等级（一个锭几个粒）（默认为9）
-     * @param {Object | string} sheet_item 板内容对象
-     * @param {number} time_level 固化时间乘数（默认为1）
-     * 
-     * @return {undefined}
-     */
-    casting_fti: function (event, fluid, base_amount, ingot_item, block_item, block_number, nugget_item, nugget_number, sheet_item, time_level) {
-        const base_time = 60;  // 3秒
-        if (!base_amount) { base_amount = 90 };
-        if (!time_level) { time_level = 1 };
+            if (ingot) {
+                lib.castingTable(
+                    { fluid: fluid, amount: baseAmount }, { item: ingot }, { tag: "tconstruct:casts/multi_use/ingot" }, false, baseTime * timeMultiplier
+                ).id(`kubejs:tconstruct/casting/${getName(ingot)}_multi`);
+                lib.castingTable(
+                    { fluid: fluid, amount: baseAmount }, { item: ingot }, { tag: "tconstruct:casts/single_use/ingot" }, true, baseTime * timeMultiplier
+                ).id(`kubejs:tconstruct/casting/${getName(ingot)}_single`);
+            }
+            if (nugget) {
+                if (!nuggetCount) nuggetCount = 9;
+                lib.castingTable(
+                    { fluid: fluid, amount: baseAmount / nuggetCount }, { item: nugget }, { tag: "tconstruct:casts/multi_use/nugget" }, false, baseTime * timeMultiplier / 3
+                ).id(`kubejs:tconstruct/casting/${getName(nugget)}_multi`);
+                lib.castingTable(
+                    { fluid: fluid, amount: baseAmount / nuggetCount }, { item: nugget }, { tag: "tconstruct:casts/single_use/nugget" }, true, baseTime * timeMultiplier / 3
+                ).id(`kubejs:tconstruct/casting/${getName(nugget)}_single`);
+            }
+            if (plate) {
+                lib.castingTable(
+                    { fluid: fluid, amount: baseAmount }, { item: plate }, { tag: "tconstruct:casts/multi_use/plate" }, false, baseTime * timeMultiplier
+                ).id(`kubejs:tconstruct/casting/${getName(plate)}_multi`);
+                lib.castingTable(
+                    { fluid: fluid, amount: baseAmount }, { item: plate }, { tag: "tconstruct:casts/single_use/plate" }, true, baseTime * timeMultiplier
+                ).id(`kubejs:tconstruct/casting/${getName(plate)}_single`);
+            }
+            if (block) {
+                if (!blockCount) blockCount = 9;
+                lib.castingBasin(
+                    { fluid: fluid, amount: baseAmount * blockCount }, { item: block }, null, null, baseTime * timeMultiplier * 3
+                ).id(`kubejs:tconstruct/casting/${getName(block)}`);
+            }
+        },
+        /**
+         * @description 熔化配方快捷函数（item -> fluid）
+         */
+        meltingItemToFluid: function(fluid, baseAmount, ingot, block, blockCount, nugget, nuggetCount, plate, meltingTime, temperature) {
+            if (!baseAmount) baseAmount = 90;
+            if (!meltingTime) meltingTime = 46;
+            if (!temperature) temperature = 800;
 
-        if (ingot_item) {
-            event.custom(tic_lib.casting_table(
-                { fluid: fluid, amount: base_amount }, ingot_item, { tag: "tconstruct:casts/multi_use/ingot" }, false, base_time * time_level
-            ));
-            event.custom(tic_lib.casting_table(
-                { fluid: fluid, amount: base_amount }, ingot_item, { tag: "tconstruct:casts/single_use/ingot" }, true, base_time * time_level
-            ));
-        };
-        if (nugget_item) {
-            if (!nugget_number) { nugget_number = 9 };
-            event.custom(tic_lib.casting_table(
-                { fluid: fluid, amount: base_amount / nugget_number }, nugget_item, { tag: "tconstruct:casts/multi_use/nugget" }, false, base_time * time_level / 3
-            ));
-            event.custom(tic_lib.casting_table(
-                { fluid: fluid, amount: base_amount / nugget_number }, nugget_item, { tag: "tconstruct:casts/single_use/nugget" }, true, base_time * time_level / 3
-            ));
-        };
-        if (sheet_item) {
-            event.custom(tic_lib.casting_table(
-                { fluid: fluid, amount: base_amount }, sheet_item, { tag: "tconstruct:casts/multi_use/plate" }, false, base_time * time_level
-            ));
-            event.custom(tic_lib.casting_table(
-                { fluid: fluid, amount: base_amount }, sheet_item, { tag: "tconstruct:casts/single_use/plate" }, true, base_time * time_level
-            ));
-        };
-        if (block_item) {
-            if (!block_number) { block_number = 9 };
-            event.custom(tic_lib.casting_basin(
-                { fluid: fluid, amount: base_amount * block_number }, block_item, null, null, base_time * time_level * 3
-            ));
-        };
-    },
-    /**
-     * @description **匠魂** 锭、块、粒、板熔化配方快捷函数 *item to fluid*
-     * 
-     * @param {Internal.RecipesEventJS} event `ServerEvents.recipes`事件
-     * @param {Object} fluid 熔融流体内容对象
-     * @param {number} base_amount 每锭mB值（默认为90）
-     * @param {Object | string} ingot_item 锭内容对象
-     * @param {Object | string} block_item 块内容对象
-     * @param {number} block_number 块压缩等级（几个锭一个块）（默认为9）
-     * @param {Object | string} nugget_item 粒内容对象
-     * @param {number} nugget_number 粒压缩等级（一个锭几个粒）（默认为9）
-     * @param {Object | string} sheet_item 板内容对象
-     * @param {number} base_time 熔化时间乘数（默认为1）
-     * @param {number} temperature 熔化温度 (固体800; 熔岩1000; 烈焰血1500) 
-     * 
-     * @return {undefined}
-     */
-    melting_itf: function (event, fluid, base_amount, ingot_item, block_item, block_number, nugget_item, nugget_number, sheet_item, base_time, temperature) {
-        if (!base_amount) { base_amount = 90 };
-        if (!base_time) { base_time = 46 };
-        if (!temperature) { temperature = 800 };
+            function getName(item) {
+                if (!item) return "";
+                if (typeof item === "string") {
+                    let arr = item.split(":");
+                    return arr.length === 2 ? arr[1] : item;
+                }
+                if (item.item) return getName(item.item);
+                return "";
+            }
 
-        if (ingot_item) {
-            event.custom(tic_lib.melting(
-                { item: ingot_item }, { fluid: fluid, amount: base_amount }, temperature, base_time
-            ));
-        };
-        if (nugget_item) {
-            if (!nugget_number) { nugget_number = 9 };
-            event.custom(tic_lib.melting({ item: nugget_item }, { fluid: fluid, amount: base_amount / nugget_number }, temperature, base_time / 3
-            ));
-        };
-        if (sheet_item) {
-            event.custom(tic_lib.melting({ item: sheet_item }, { fluid: fluid, amount: base_amount }, temperature, base_time
-            ));
-        };
-        if (block_item) {
-            if (!block_number) { block_number = 9 };
-            event.custom(tic_lib.melting({ item: block_item }, { fluid: fluid, amount: base_amount * block_number }, temperature, base_time * 3
-            ));
-        };
-    },
-}
+            if (ingot) {
+                lib.melting(
+                    { item: ingot }, { fluid: fluid, amount: baseAmount }, temperature, meltingTime
+                ).id(`kubejs:tconstruct/melting/${getName(ingot)}`);
+            }
+            if (nugget && nuggetCount) {
+                lib.melting(
+                    { item: nugget }, { fluid: fluid, amount: baseAmount / nuggetCount }, temperature, meltingTime / 3
+                ).id(`kubejs:tconstruct/melting/${getName(nugget)}`);
+            }
+            if (plate) {
+                lib.melting(
+                    { item: plate }, { fluid: fluid, amount: baseAmount }, temperature, meltingTime
+                ).id(`kubejs:tconstruct/melting/${getName(plate)}`);
+            }
+            if (block) {
+                if (!blockCount) blockCount = 9;
+                lib.melting(
+                    { item: block }, { fluid: fluid, amount: baseAmount * blockCount }, temperature, meltingTime * 3
+                ).id(`kubejs:tconstruct/melting/${getName(block)}`);
+            }
+        },
+        /**
+         * @description 同时生成熔化与浇筑配方（item <-> fluid）
+         */
+        castingAndMelting: function(fluid, baseAmount, ingot, block, blockCount, nugget, nuggetCount, plate, timeMultiplier, meltingTime, temperature) {
+            this.castingFluidToItem(fluid, baseAmount, ingot, block, blockCount, nugget, nuggetCount, plate, timeMultiplier);
+            this.meltingItemToFluid(fluid, baseAmount, ingot, block, blockCount, nugget, nuggetCount, plate, meltingTime, temperature);
+        }
+    };
+};
 
 /**
- * @description 匠魂KubeJS 1.20.1版本快捷代码`tic_lib`。*均返回Object对象用于传入`event.custom()`。*
+ * @description 匠魂KubeJS 1.20.1版本快捷代码 tconstructLib。
  */
-global.tic_lib = tic_lib
+global.tconstructLib = tconstructLib;
 /**
- * @description 匠魂KubeJS 1.20.1版本快捷代码扩展`tic_morelib`。*均需要传入`event`对象而无返回值。*
+ * @description 匠魂KubeJS 1.20.1版本快捷代码扩展 tconstructHelper。
  */
-global.tic_morelib = tic_morelib
+global.tconstructHelper = tconstructHelper;

@@ -1,6 +1,6 @@
-// 应用能源2
-
-// 需求：Kubejs Create模组
+/**
+ * "@create"
+ */
 ServerEvents.recipes(event => {
     // 电路板压印
     event.recipes.create.deploying('ae2:printed_logic_processor', ['minecraft:gold_ingot', 'ae2:logic_processor_press']).keepHeldItem()
@@ -36,8 +36,13 @@ ServerEvents.recipes(event => {
     event.recipes.create.splashing(['ae2:fluix_glass_cable'], ['#ae2:glass_cable'])
     event.recipes.create.splashing(['ae2:fluix_covered_dense_cable'], ['#ae2:covered_dense_cable'])
     event.recipes.create.splashing(['ae2:fluix_smart_dense_cable'], ['#ae2:smart_dense_cable'])
+})
 
-      // 应用能源2初期合成-必然要先探索陨石的限制
+/**
+ * "@minecraft"
+ */
+ServerEvents.recipes(event => {
+    // 应用能源2初期合成-必然要先探索陨石的限制
     event.replaceInput(
         { id: 'ae2:network/blocks/inscribers' },
         'minecraft:copper_ingot'  ,

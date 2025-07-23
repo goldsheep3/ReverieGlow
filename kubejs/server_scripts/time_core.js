@@ -1,8 +1,9 @@
+/**
+ * "@minecraft"
+ */
 ServerEvents.recipes(event => {
-
   // 时间核心的合成配方
-  event.shaped(
-    'kubejs:time_core',
+  event.shaped('kubejs:time_core',
     [
       'AAA',
       'BCB',
@@ -16,8 +17,8 @@ ServerEvents.recipes(event => {
       E: 'minecraft:snowball'
     }
   ).id('kubejs:time_core')
-  event.shaped(
-    'kubejs:compressed_time_core',
+
+  event.shaped('kubejs:compressed_time_core',
     [
       'AAA',
       'ABA',
@@ -28,8 +29,8 @@ ServerEvents.recipes(event => {
       B: 'minecraft:ender_eye'
     }
   ).id('kubejs:compressed_time_core')
-  event.shaped(
-    'kubejs:double_compressed_time_core',
+
+  event.shaped('kubejs:double_compressed_time_core',
     [
       'AAA',
       'ABA',
@@ -40,25 +41,24 @@ ServerEvents.recipes(event => {
       B: 'kubejs:dragon_egg_fragment'
     }
   ).id('kubejs:double_compressed_time_core')
+
   // 龙蛋碎片
-  event.shapeless(
-    '4x kubejs:dragon_egg_fragment', ['minecraft:dragon_egg']
+  event.shapeless('4x kubejs:dragon_egg_fragment',
+    ['minecraft:dragon_egg']
   ).id('kubejs:dragon_egg_to_fragment')
 
-  // 时间之瓶的合成修改
-  event.remove({ id: 'tiab:time_in_a_bottle' })  // 删除原有的时间之瓶配方，因为雪球的关系多了点难度
-  event.shapeless(
-    'tiab:time_in_a_bottle', ['kubejs:time_core', 'minecraft:glass_bottle']
+  // 时间之瓶的合成增加
+  event.shapeless('tiab:time_in_a_bottle',
+    ['kubejs:time_core', 'minecraft:glass_bottle']
   ).id('kubejs:time_core_into_bottle')
-  event.shapeless(
-    'kubejs:time_core',
+
+  event.shapeless('kubejs:time_core',
     ['tiab:time_in_a_bottle']
   ).replaceIngredient({ item: 'tiab:time_in_a_bottle' }, Item.of('minecraft:glass_bottle')).id('kubejs:time_core_from_bottle')
 
   // 加速火把的合成修改
   event.remove({ id: 'torcherino:torcherino' })
-  event.shaped(
-    '2x torcherino:torcherino',
+  event.shaped('2x torcherino:torcherino',
     [
       'BAB',
       'ACA',
@@ -70,10 +70,10 @@ ServerEvents.recipes(event => {
       C: 'minecraft:nether_star'
     }
   ).id('kubejs:torcherino')
+
   event.remove({ id: 'torcherino:compressed_torcherino' })
   event.remove({ id: 'torcherino:compressed_torcherino_to_single' })
-  event.shaped(
-    'torcherino:compressed_torcherino',
+  event.shaped('torcherino:compressed_torcherino',
     [
       'BAB',
       'ACA',
@@ -85,10 +85,10 @@ ServerEvents.recipes(event => {
       C: 'minecraft:nether_star'
     }
   ).id('kubejs:compressed_torcherino')
+
   event.remove({ id: 'torcherino:double_compressed_torcherino' })
   event.remove({ id: 'torcherino:double_compressed_torcherino_to_compressed' })
-  event.shaped(
-    'torcherino:double_compressed_torcherino',
+  event.shaped('torcherino:double_compressed_torcherino',
     [
       'BAB',
       'ACA',
@@ -100,11 +100,14 @@ ServerEvents.recipes(event => {
       C: 'minecraft:nether_star'
     }
   ).id('kubejs:double_compressed_torcherino')
-  
+
 })
 
-// 时间核心补充时间之瓶时间 
+/**
+ * "@minecraft"
+ */
 ItemEvents.rightClicked(event => {
+  // 时间核心补充时间之瓶时间 
   const ONE_HOUR = 72000;
   const { player, item, hand } = event
 

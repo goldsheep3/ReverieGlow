@@ -1,5 +1,6 @@
-// 屠宰工艺
-
+/**
+ * "@minecraft"
+ */
 ServerEvents.tags('item', event => {
     // 非骨头颅视为头颅用于合成
     let butchercraft_heads = [
@@ -19,16 +20,20 @@ ServerEvents.tags('item', event => {
     });
 })
 
-// 需求：匠魂3
+/**
+ * "@tconstruct"
+ */
 ServerEvents.tags('fluid', event => {
     // 屠宰过程产生的血液视为肉汤可用于生铁配方
     event.add('tconstruct:meat_soup', 'butchercraft:blood_fluid')
 })
 
-// 需求：KubeJS Create
+/**
+ * "@create"
+ */
 ServerEvents.recipes(event => {
     // 头骨支持粉碎为骨粉
-    let butchercraft_skulls = [
+    const butchercraft_skulls = [
         'butchercraft:cow_skull_head_item',
         'butchercraft:sheep_skull_head_item',
         'butchercraft:pig_skull_head_item',

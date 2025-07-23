@@ -36,4 +36,16 @@ ServerEvents.recipes(event => {
     event.recipes.create.splashing(['ae2:fluix_glass_cable'], ['#ae2:glass_cable'])
     event.recipes.create.splashing(['ae2:fluix_covered_dense_cable'], ['#ae2:covered_dense_cable'])
     event.recipes.create.splashing(['ae2:fluix_smart_dense_cable'], ['#ae2:smart_dense_cable'])
+
+      // 应用能源2初期合成-必然要先探索陨石的限制
+    event.replaceInput(
+        { id: 'ae2:network/blocks/inscribers' },
+        'minecraft:copper_ingot'  ,
+        'ae2:certus_quartz_crystal'
+    )
+    event.replaceInput(
+        { id: 'ae2:network/blocks/crystal_processing_charger' },
+        'minecraft:copper_ingot'  ,
+        'ae2:certus_quartz_crystal'
+    )
 })

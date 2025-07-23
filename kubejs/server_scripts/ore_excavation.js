@@ -13,6 +13,21 @@ ServerEvents.recipes(event => {
     event.custom(tic.melting({ item: 'createoreexcavation:raw_diamond' }, { fluid: 'tconstruct:molten_diamond', amount: 100 }, 1450, 100))
     event.custom(tic.melting({ item: 'createoreexcavation:raw_emerald' }, { fluid: 'tconstruct:molten_emerald', amount: 100 }, 934, 73))
 
+    // 红石原石的mek粉碎处理
+    event.custom({
+        "type": "mekanism:crushing",
+        "input": {
+            "ingredient": {
+                "item": "createoreexcavation:raw_redstone"
+            }
+        },
+        "output": {
+            "item": "minecraft:redstone",
+            "count": 3
+        }
+    }).id(`kubejs:mekanism/crushing/raw_redstone`);
+    
+
     function oreExcavationStandard(
         item, // 矿石物品
         show_name, // 矿脉显示名称

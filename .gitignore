@@ -1,33 +1,42 @@
+# 游戏存档文件
 saves/
 
-BeforeTomorrowB1.5-natives/
+# 缓存与日志类文件
+*-natives/
 blueprints/
 local/
 logs/
-tacz/
 tacz_backup/
 tlm_custom_pack/
 patchouli_books/
-PCL/
 schematics/
 xaero/
 XaeroWaypoints_BACKUP*/
 modernfix/
 .qmenu_opened.marker
 patchouli_data.json
-rhino.local.properties
 usercache.json
 usernamecache.json
 BTLib.dll
-.vscode/
-.probe/
-backups/
 crash-reports/
 ops.json
 screenshots/
 map exports/
-kubejs/*/jsconfig.json/
-kubejs/README.txt
-_update_pack/
+config/yes_steve_model/cache
 
+# KubeJS与ProbeJS
+rhino.local.properties
+kubejs/README.txt
+kubejs/jsconfig.json
+kubejs/*/jsconfig.json
+kubejs/config/
+
+
+# 配置文件
+PCL/
+.vscode/
+.probe/
+
+# 目前排除的文件
+tacz/
 config/yes_steve_model/custom

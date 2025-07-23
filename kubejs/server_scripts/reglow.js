@@ -27,6 +27,7 @@ const UPDATE_HISTORY = [
   { version: "b2.0", desc: "[整理]包英文名更名为§6ReverieGlow§a，开发代号为§6Reglow" },
   { version: "b2.0.1", desc: "[整理]重构了server_scripts的结构，优化了代码架构" },
   { version: "b2.1", desc: "[模组]对矿石开掘添加了三种原石（粗矿）的块状物品，但未完成对应处理配方；删除了咖啡乐事模组及相关脚本"},
+  { version: "b2.1.1", desc: "[配方]修复了矿石开掘namspace写错的问题；修复了游玩和日志提示系统的错误" },
 
   // todo
   // { version: "", desc: "矿石开掘块的处理方式" },
@@ -68,9 +69,11 @@ function sendUpdateLog(player, updates, options) {
 }
 
 function tellVersionAndQQ(player) {
-  player.tell("§b当前版本为 §9" + newestVersion + " §b。遇到问题或建议可加QQ群: §e" + QQ_GROUP)
-    .clickCopy(QQ_GROUP)
-    .hover("§b点击复制群号: §e" + QQ_GROUP)
+  player.tell(
+    Text.of("§b当前版本为 §9" + newestVersion + " §b。遇到问题或建议可加QQ群: §e" + QQ_GROUP)
+      .clickCopy(QQ_GROUP)
+      .hover("§b点击复制群号: §e" + QQ_GROUP)
+  );
 }
 
 PlayerEvents.loggedIn(function(event) {
@@ -101,7 +104,11 @@ PlayerEvents.loggedIn(function(event) {
     });
     var moreCount = updatesToShow.length - maxCount;
     if (moreCount > 0) {
-      player.tell("§b……§e" + moreCount + "§b个更多版本更新日志。使用§a/kiane_history§b查看主版本更新日志，或加入QQ群§e" + QQ_GROUP + "§b获取更多信息。");
+      player.tell(
+        Text.of("§b……§e" + moreCount + "§b个更多版本更新日志。使用§a/kiane_history§b查看主版本更新日志，或加入QQ群§e" + QQ_GROUP + "§b获取更多信息。")
+          .clickCopy(QQ_GROUP)
+          .hover("§b点击复制群号: §e" + QQ_GROUP)
+      );
     }
   }
   player.tell("§3==========================================");

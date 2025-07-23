@@ -11,23 +11,23 @@ ServerEvents.recipes(event => {
     // todo 处理还没做
     event.shaped('kubejs:raw_diamond_block',
         ['AAA', 'AAA', 'AAA'],
-        { A: 'createexcavation:raw_diamond' }
+        { A: 'createoreexcavation:raw_diamond' }
     ).id('kubejs:raw_diamond_block');
     event.shaped('kubejs:raw_emerald_block',
         ['AAA', 'AAA', 'AAA'],
-        { A: 'createexcavation:raw_emerald' }
+        { A: 'createoreexcavation:raw_emerald' }
     ).id('kubejs:raw_emerald_block');
     event.shaped('kubejs:raw_redstone_block',
         ['AAA', 'AAA', 'AAA'],
-        { A: 'createexcavation:raw_redstone' }
+        { A: 'createoreexcavation:raw_redstone' }
     ).id('kubejs:raw_redstone_block');
-    event.shapeless('9x createexcavation:raw_diamond',
+    event.shapeless('9x createoreexcavation:raw_diamond',
         ['kubejs:raw_diamond_block']
     ).id('kubejs:raw_diamond_from_block');
-    event.shapeless('9x createexcavation:raw_emerald',
+    event.shapeless('9x createoreexcavation:raw_emerald',
         ['kubejs:raw_emerald_block']
     ).id('kubejs:raw_emerald_from_block');
-    event.shapeless('9x createexcavation:raw_redstone',
+    event.shapeless('9x createoreexcavation:raw_redstone',
         ['kubejs:raw_redstone_block']
     ).id('kubejs:raw_redstone_from_block');
 

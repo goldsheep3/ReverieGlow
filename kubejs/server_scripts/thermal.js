@@ -14,6 +14,7 @@ const EARTH_CHANGE_RECIPES = [
  * "@mekanism"
  */
 ServerEvents.recipes(event => {
+    // 处理 裂岩弹 配方的Mek还原
     EARTH_CHANGE_RECIPES.forEach(pair => {
         const itemParts = pair[0].split(':')
         event.custom({
@@ -34,6 +35,7 @@ ServerEvents.recipes(event => {
  * "@create"
  */
 ServerEvents.recipes(event => {
+    // 处理 裂岩弹 配方的Create还原
     EARTH_CHANGE_RECIPES.forEach(pair => {
         const itemParts = pair[0].split(':')
         event.recipes.create.crushing(pair[1], pair[0]).id(`kubejs:create/crushing/${itemParts[1]}`);

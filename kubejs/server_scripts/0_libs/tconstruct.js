@@ -36,7 +36,7 @@ const tconstructLib = function(event) {
         }
         // 已是对象直接返回
         return val;
-    }
+    };
 
     return {
         /**

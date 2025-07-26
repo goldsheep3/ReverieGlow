@@ -23,6 +23,7 @@ ops.json
 screenshots/
 map exports/
 config/yes_steve_model/cache
+*.log
 
 # KubeJS与ProbeJS
 rhino.local.properties
@@ -30,7 +31,8 @@ kubejs/README.txt
 kubejs/jsconfig.json
 kubejs/*/jsconfig.json
 kubejs/config/
-
+# 开发用
+kubejs/*/dev/
 
 # 配置文件
 PCL/
@@ -38,5 +40,6 @@ PCL/
 .probe/
 
 # 目前排除的文件
+emi.json
 tacz/
 config/yes_steve_model/custom

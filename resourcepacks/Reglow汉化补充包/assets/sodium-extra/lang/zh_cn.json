@@ -1,0 +1,23 @@
+{
+    "options.particles.minecraft.dust_pillar": "尘柱",
+    "options.particles.minecraft.dust_pillar.tooltip": "由重锤攻击产生。",
+    "options.particles.minecraft.gust_emitter_large": "大风发射器",
+    "options.particles.minecraft.gust_emitter_large.tooltip": "当风能量击中方块时产生。生成大量的风粒子。",
+    "options.particles.minecraft.gust_emitter_small": "小风发射器",
+    "options.particles.minecraft.gust_emitter_small.tooltip": "当风能量击中方块时产生。生成少量的风粒子。",
+    "options.particles.minecraft.infested": "被感染",
+    "options.particles.minecraft.infested.tooltip": "由具有感染效果的实体产生。",
+    "options.particles.minecraft.item_cobweb.": "物品蜘蛛网",
+    "options.particles.minecraft.item_cobweb.tooltip": "由具有编织效果的实体产生。",
+    "options.particles.minecraft.ominous_spawning": "不祥生成",
+    "options.particles.minecraft.raid_omen": "袭击预兆",
+    "options.particles.minecraft.raid_omen.tooltip": "由具有袭击预兆效果的玩家和生物产生。",
+    "options.particles.minecraft.small_gust": "小风",
+    "options.particles.minecraft.small_gust.tooltip": "由具有风能量效果的生物产生。",
+    "options.particles.minecraft.trial_omen": "试炼预兆",
+    "options.particles.minecraft.trial_omen.tooltip": "由具有试炼预兆效果的玩家和生物产生。",
+    "options.particles.minecraft.trial_spawner_detection_ominous": "试炼生成器检测不祥",
+    "options.particles.minecraft.trial_spawner_detection_ominous.tooltip": "当不祥试炼生成器激活时产生。",
+    "options.particles.minecraft.vault_connection": "地窖连接",
+    "options.particles.minecraft.vault_connection.tooltip": "当玩家靠近地窖时产生。"
+}

@@ -1,0 +1,7 @@
+{
+    "item.mythicbotany.inactive_alsteel_template": "异域锻造模板",
+    "tooltip.mythicbotany.alfsteel_template.applies_to": "泰拉钢装备",
+    "tooltip.mythicbotany.alfsteel_template.upgrade": "阿尔夫钢升级",
+    "tooltip.mythicbotany.alfsteel_template.slot_description": "添加 %s",
+    "tooltip.mythicbotany.alfsteel_template.slot_base": "泰拉钢盔甲、武器或工具"
+}

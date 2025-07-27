@@ -1,0 +1,348 @@
+name: Build and Publish Minecraft Modpack (No Remote Commit)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # 获取完整历史以获取提交信息
+    
+    - name: Get commit message title
+      id: commit
+      run: |
+        COMMIT_TITLE=$(git log -1 --pretty=format:'%s')
+        echo "title=$COMMIT_TITLE" >> $GITHUB_OUTPUT
+        echo "Commit title: $COMMIT_TITLE"
+    
+    - name: Install jq for JSON5 processing
+      run: |
+        # 安装 jq 用于 JSON 处理
+        sudo apt-get update
+        sudo apt-get install -y jq
+        
+        # 安装 Node.js 用于处理 JSON5
+        curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+        
+        # 全局安装 json5 包用于转换 JSON5 到 JSON
+        sudo npm install -g json5
+    
+    - name: Read configuration files
+      id: config
+      run: |
+        # 检查 pub.json5 文件是否存在
+        if [ ! -f "pub.json5" ]; then
+          echo "Error: pub.json5 not found"
+          exit 1
+        fi
+        
+        # 将 JSON5 转换为 JSON 并读取配置
+        json5 pub.json5 > pub.json
+        
+        # 读取配置项
+        PUBRENAME_CONTENT=$(jq -r '.rename' pub.json)
+        PUBVERFILENAME_CONTENT=$(jq -r '.currentVersion' pub.json)
+        PUBRELEASENAME_CONTENT=$(jq -r '.releaseName' pub.json)
+        
+        # 替换模板中的占位符
+        NEW_VERSION_ID=$(echo "$PUBRENAME_CONTENT" | sed "s/{}/${{ steps.commit.outputs.title }}/g")
+        RELEASE_NAME=$(echo "$PUBRELEASENAME_CONTENT" | sed "s/{}/${{ steps.commit.outputs.title }}/g")
+        
+        echo "current_version=$PUBVERFILENAME_CONTENT" >> $GITHUB_OUTPUT
+        echo "new_version=$NEW_VERSION_ID" >> $GITHUB_OUTPUT
+        echo "release_name=$RELEASE_NAME" >> $GITHUB_OUTPUT
+        
+        echo "Current version: $PUBVERFILENAME_CONTENT"
+        echo "New version: $NEW_VERSION_ID"
+        echo "Release name: $RELEASE_NAME"
+        
+        # 清理临时文件
+        rm pub.json
+    
+    - name: Package resourcepack
+      run: |
+        # 检查目标资源包文件夹是否存在
+        if [ -d "resourcepacks/Reglow汉化补充包" ]; then
+          echo "Found Reglow汉化补充包 folder, packaging..."
+          cd resourcepacks
+          zip -r "Reglow汉化补充包.zip" "Reglow汉化补充包/"
+          rm -rf "Reglow汉化补充包"
+          cd ..
+          echo "Packaged and removed original folder"
+        else
+          echo "Reglow汉化补充包 folder not found, skipping packaging"
+        fi
+    
+    - name: Update options.txt
+      run: |
+        # 更新 options.txt 中的资源包引用
+        if [ -f "options.txt" ]; then
+          sed -i 's/"file\/Reglow汉化补充包"/"file\/Reglow汉化补充包.zip"/g' options.txt
+          echo "Updated options.txt resourcePacks reference"
+        else
+          echo "options.txt not found"
+        fi
+    
+    - name: Remove files based on pub.json5
+      run: |
+        # 检查 pub.json5 文件是否存在
+        if [ ! -f "pub.json5" ]; then
+          echo "pub.json5 not found, skipping file removal"
+          exit 0
+        fi
+        
+        # 将 JSON5 转换为 JSON 并读取要删除的文件列表
+        json5 pub.json5 > pub_temp.json
+        
+        # 读取要删除的文件列表
+        REMOVE_FILES=$(jq -r '.remove[]?' pub_temp.json)
+        
+        if [ -z "$REMOVE_FILES" ]; then
+          echo "No files specified for removal"
+        else
+          echo "Files to remove:"
+          echo "$REMOVE_FILES"
+          echo ""
+          
+          # 逐个删除文件
+          while IFS= read -r file; do
+            if [ -n "$file" ] && [ "$file" != "null" ]; then
+              if [ -e "$file" ]; then
+                if [ -d "$file" ]; then
+                  rm -rf "$file"
+                  echo "Removed directory: $file"
+                elif [ -f "$file" ]; then
+                  rm -f "$file"
+                  echo "Removed file: $file"
+                fi
+              else
+                echo "File/directory not found: $file"
+              fi
+            fi
+          done <<< "$REMOVE_FILES"
+        fi
+        
+        # 清理临时文件
+        rm pub_temp.json
+    
+    - name: Rename version files
+      run: |
+        CURRENT_VERSION="${{ steps.config.outputs.current_version }}"
+        NEW_VERSION="${{ steps.config.outputs.new_version }}"
+        
+        echo "Renaming from $CURRENT_VERSION to $NEW_VERSION"
+        
+        # 重命名 .jar 文件
+        if [ -f "${CURRENT_VERSION}.jar" ]; then
+          mv "${CURRENT_VERSION}.jar" "${NEW_VERSION}.jar"
+          echo "Renamed ${CURRENT_VERSION}.jar to ${NEW_VERSION}.jar"
+        else
+          echo "${CURRENT_VERSION}.jar not found"
+        fi
+        
+        # 重命名 .json 文件
+        if [ -f "${CURRENT_VERSION}.json" ]; then
+          mv "${CURRENT_VERSION}.json" "${NEW_VERSION}.json"
+          echo "Renamed ${CURRENT_VERSION}.json to ${NEW_VERSION}.json"
+        else
+          echo "${CURRENT_VERSION}.json not found"
+        fi
+    
+    - name: Update JSON file id field
+      run: |
+        CURRENT_VERSION="${{ steps.config.outputs.current_version }}"
+        NEW_VERSION="${{ steps.config.outputs.new_version }}"
+        JSON_FILE="${NEW_VERSION}.json"
+        
+        # 更新 JSON 文件中的 id 字段
+        if [ -f "$JSON_FILE" ]; then
+          # 使用 sed 替换 JSON 中的 id 字段
+          sed -i "s/\"id\": \"$CURRENT_VERSION\"/\"id\": \"$NEW_VERSION\"/g" "$JSON_FILE"
+          echo "Updated id field in $JSON_FILE from $CURRENT_VERSION to $NEW_VERSION"
+          
+          # 验证更改
+          if grep -q "\"id\": \"$NEW_VERSION\"" "$JSON_FILE"; then
+            echo "✓ Successfully updated id field"
+          else
+            echo "⚠ Warning: id field may not have been updated correctly"
+          fi
+        else
+          echo "JSON file $JSON_FILE not found"
+        fi
+    
+    # 注意：此版本不会提交更改到远程仓库
+    # 所有处理都只在构建环境中进行，不影响源代码仓库
+    
+    - name: Create release artifacts
+      run: |
+        NEW_VERSION="${{ steps.config.outputs.new_version }}"
+        
+        # 创建构建信息文件
+        echo "Build Information" > build-info.txt
+        echo "=================" >> build-info.txt
+        echo "Version: $NEW_VERSION" >> build-info.txt
+        echo "Commit: ${{ github.sha }}" >> build-info.txt
+        echo "Commit Message: ${{ steps.commit.outputs.title }}" >> build-info.txt
+        echo "Build Date: $(date)" >> build-info.txt
+        echo "Branch: ${{ github.ref_name }}" >> build-info.txt
+        echo "Note: No changes committed to remote repository" >> build-info.txt
+        echo "" >> build-info.txt
+        echo "Package Contents:" >> build-info.txt
+        echo "- Processed resourcepacks (Reglow汉化补充包 converted to .zip)" >> build-info.txt
+        echo "- Files removed as specified in pub.json5" >> build-info.txt
+        echo "- Version files renamed and updated" >> build-info.txt
+        echo "- Excludes: .github/, pub.json5" >> build-info.txt
+        
+        echo "Created build information file"
+    
+    - name: Create release package
+      id: create_package
+      run: |
+        NEW_VERSION="${{ steps.config.outputs.new_version }}"
+        RELEASE_NAME="${{ steps.config.outputs.release_name }}"
+        PACKAGE_NAME="${RELEASE_NAME// /_}_$(date +%Y%m%d_%H%M%S).zip"
+        
+        echo "Creating release package: $PACKAGE_NAME"
+        
+        # 创建一个临时目录来组织文件
+        mkdir -p release_temp
+        
+        # 复制主要文件到发布目录
+        if [ -f "${NEW_VERSION}.jar" ]; then
+          cp "${NEW_VERSION}.jar" release_temp/
+        fi
+        
+        if [ -f "${NEW_VERSION}.json" ]; then
+          cp "${NEW_VERSION}.json" release_temp/
+        fi
+        
+        # 复制配置文件
+        if [ -f "options.txt" ]; then
+          cp "options.txt" release_temp/
+        fi
+        
+        # 复制资源包目录
+        if [ -d "resourcepacks" ] && [ "$(ls -A resourcepacks 2>/dev/null)" ]; then
+          cp -r "resourcepacks" release_temp/
+        fi
+        
+        # 复制模组目录 (如果存在且不为空)
+        if [ -d "mods" ] && [ "$(ls -A mods 2>/dev/null)" ]; then
+          cp -r "mods" release_temp/
+        fi
+        
+        # 复制配置目录
+        if [ -d "config" ] && [ "$(ls -A config 2>/dev/null)" ]; then
+          cp -r "config" release_temp/
+        fi
+        
+        # 复制其他重要目录
+        for dir in "kubejs" "defaultconfigs" "local" "patchouli_books" "shaderpacks" "tacz" "tlm_custom_pack" "xaero"; do
+          if [ -d "$dir" ] && [ "$(ls -A $dir 2>/dev/null)" ]; then
+            cp -r "$dir" release_temp/
+          fi
+        done
+        
+        # 复制其他重要文件（排除工作流文件和配置文件）
+        for file in "*.dll" "*.toml" "*.ini"; do
+          if ls $file 1> /dev/null 2>&1; then
+            cp $file release_temp/ 2>/dev/null || true
+          fi
+        done
+        
+        # 单独处理 JSON 和 TXT 文件，排除特定文件
+        for file in *.json; do
+          if [ -f "$file" ] && [ "$file" != "pub.json5" ]; then
+            cp "$file" release_temp/ 2>/dev/null || true
+          fi
+        done
+        
+        for file in *.txt; do
+          if [ -f "$file" ]; then
+            cp "$file" release_temp/ 2>/dev/null || true
+          fi
+        done
+        
+        # 添加构建信息文件
+        cp build-info.txt release_temp/
+        
+        # 创建发布包，排除工作流文件和配置文件
+        cd release_temp
+        zip -r "../$PACKAGE_NAME" . \
+          -x "*.git*" "*/.git/*" \
+          -x ".github/*" \
+          -x "pub.json5"
+        cd ..
+        
+        # 清理临时目录
+        rm -rf release_temp
+        
+        echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
+        echo "Created release package: $PACKAGE_NAME"
+        echo "Package size: $(du -h $PACKAGE_NAME | cut -f1)"
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: minecraft-modpack-${{ steps.config.outputs.new_version }}
+        path: |
+          *.jar
+          *.json
+          !pub.json5
+          build-info.txt
+          resourcepacks/
+          mods/
+          config/
+        retention-days: 30
+    
+    - name: Create Release Draft
+      id: create_release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ steps.config.outputs.new_version }}
+        name: ${{ steps.config.outputs.release_name }}
+        body: |
+          ## ${{ steps.config.outputs.release_name }}
+          
+          ### 📦 版本信息
+          - **版本标识**: ${{ steps.config.outputs.new_version }}
+          - **提交消息**: ${{ steps.commit.outputs.title }}
+          - **构建时间**: ${{ github.event.head_commit.timestamp }}
+          - **提交哈希**: ${{ github.sha }}
+          
+          ### 🔄 本次更新
+          ${{ steps.commit.outputs.title }}
+          
+          ### 📋 包含内容
+          - Minecraft 整合包主文件 (.jar, .json)
+          - 配置文件 (options.txt, config/)
+          - 资源包 (resourcepacks/)
+          - 模组文件 (mods/)
+          - KubeJS 脚本 (kubejs/)
+          - 其他配置和数据文件
+          
+          ### 🚀 安装说明
+          1. 下载下方的整合包文件
+          2. 解压到您的 Minecraft 版本目录
+          3. 使用启动器选择对应版本启动游戏
+          
+          ### ⚠️ 注意事项
+          - 请确保使用正确的 Minecraft 版本
+          - 建议备份您的存档数据
+          - 首次启动可能需要较长时间来加载模组
+          - 本构建未提交更改到源代码仓库
+          
+          ---
+          *此发行版由 GitHub Actions 自动构建生成*
+        files: ${{ steps.create_package.outputs.package_name }}
+        draft: true
+        prerelease: false
+        token: ${{ secrets.GITHUB_TOKEN }}

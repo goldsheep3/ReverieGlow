@@ -3,7 +3,6 @@ saves/
 
 # 缓存与日志类文件
 *-natives/
-blueprints/
 local/
 logs/
 tacz_backup/

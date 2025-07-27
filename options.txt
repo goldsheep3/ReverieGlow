@@ -42,7 +42,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
-resourcePacks:["vanilla","tacz_resources","mod_resources","builtin/towntalk","Moonlight Mods Dynamic Assets","file/Adventurer\u0027sChest1.12.2_v2.zip","file/Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip","file/Reglow汉化补充包.zip"]
+resourcePacks:["vanilla","tacz_resources","mod_resources","builtin/towntalk","Moonlight Mods Dynamic Assets","file/Adventurer\u0027sChest1.12.2_v2.zip","file/Minecraft-Mod-Language-Modpack-Converted-1.20.1.zip","file/Reglow汉化补充包"]
 incompatibleResourcePacks:["builtin/towntalk","file/Adventurer\u0027sChest1.12.2_v2.zip"]
 lastServer:
 lang:zh_cn

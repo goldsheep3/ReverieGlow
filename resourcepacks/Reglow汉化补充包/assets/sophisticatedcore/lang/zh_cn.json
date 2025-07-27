@@ -1,0 +1,15 @@
+{
+    "upgrade_group.sophisticatedcore.jukebox_upgrades": "点唱机升级",
+    "gui.sophisticatedcore.upgrades.advanced_jukebox": "点唱机",
+    "gui.sophisticatedcore.upgrades.advanced_jukebox.tooltip": "高级点唱机",
+    "gui.sophisticatedcore.upgrades.buttons.shuffle_on": "随机播放已启用",
+    "gui.sophisticatedcore.upgrades.buttons.shuffle_off": "随机播放已禁用",
+    "gui.sophisticatedcore.upgrades.buttons.repeat_all": "全部重复",
+    "gui.sophisticatedcore.upgrades.buttons.repeat_one": "单曲重复",
+    "gui.sophisticatedcore.upgrades.buttons.no_repeat": "重复已禁用",
+    "gui.sophisticatedcore.upgrades.buttons.previous_disc": "上一首",
+    "gui.sophisticatedcore.upgrades.buttons.next_disc": "下一首",
+    "gui.sophisticatedcore.buttons.confirm": "确认",
+    "gui.sophisticatedcore.buttons.cancel": "取消",
+    "gui.sophisticatedcore.buttons.transparent": "无颜色"
+}

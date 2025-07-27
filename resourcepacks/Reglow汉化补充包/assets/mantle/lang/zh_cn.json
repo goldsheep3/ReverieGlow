@@ -1,0 +1,19 @@
+{
+    "command.mantle.tags_for.no_targeted_block_entity": "没有目标方块实体",
+    "command.mantle.book_test.not_found": "未知的书籍 ID %s",
+    "command.mantle.book.export.success": "已导出书籍图像到 '%s'",
+    "command.mantle.book.export.error_generic": "导出书籍图像失败，请查看日志获取详细信息",
+    "command.mantle.book.export.error_io": "创建书籍图像目录 '%s' 失败",
+    "command.mantle.dump_tag.success_log": "已将组合 %s 标签 '%s' 转储到 '%s'",
+    "command.mantle.harvest_tiers.success_log": "已将排序的等级打印到控制台日志",
+    "command.mantle.harvest_tiers.success_save": "已将排序的等级转储到 '%s'",
+    "command.mantle.harvest_tiers.success_list": "收获等级：",
+    "command.mantle.harvest_tiers.tag": "%s：方块标签 %s",
+    "command.mantle.harvest_tiers.no_tag": "%s：无标签",
+    "command.mantle.registry.not_found": "未知的注册表 '%s'",
+    "command.mantle.tag_preference.empty_tag": "没有 %s 标签 %s 的偏好",
+    "command.mantle.tag_preference.preference": "%s 标签 %s 的首选值是 %s",
+    "gui.mantle.fluid.hold_shift": "按住 §e§oShift§r§7 查看桶",
+    "block.mantle.tank.drained": "已排空 %s mB %s",
+    "block.mantle.tank.filled": "已填充 %s mB %s"
+}

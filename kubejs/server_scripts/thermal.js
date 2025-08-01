@@ -1,3 +1,11 @@
+/**
+ * "@vanilla"
+ */
+ServerEvents.recipes(event => {
+    event.remove({input: 'thermal:earth_charge'})
+    event.remove({output: 'thermal:earth_charge'})
+})
+
 const EARTH_CHANGE_RECIPES = [
     ['thermal:sulfur', 'thermal:sulfur_dust'],
     ['thermal:apatite', 'thermal:apatite_dust'],

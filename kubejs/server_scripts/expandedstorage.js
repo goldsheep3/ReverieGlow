@@ -1,5 +1,5 @@
 /**
- * "@minecraft"
+ * "@vanilla"
  * @Bugfix
  */
 ServerEvents.recipes(event => {

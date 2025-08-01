@@ -1,5 +1,5 @@
 /**
- * "@minecraft"
+ * "@vanilla"
  */
 ServerEvents.tags('minecraft:biome', event => {
     

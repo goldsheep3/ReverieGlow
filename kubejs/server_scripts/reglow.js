@@ -1,5 +1,6 @@
 const UPDATE_HISTORY = [
   { version: "0.3.0b", desc: "更新了部分模组，修复了AE2无法拼音搜索的问题" },
+  { version: "0.3.1b", desc: "处理了模组的翻译问题，轻度修改了kubejs的部分内容" },
 
   // todo
   // { version: "", desc: "模组整体更新" }

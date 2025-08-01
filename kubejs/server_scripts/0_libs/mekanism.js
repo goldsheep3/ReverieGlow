@@ -181,7 +181,7 @@ const mekanismLib = function (event) {
             const result = {
                 type: "mekanism:metallurgic_infusing",
                 chemicalInput: parseGasIngredient(chemicalInput, 10),
-                input: {
+                itemInput: {
                     ingredient: parseIngredientOrFluid(itemInput)
                 },
                 output: parseIngredientOrFluid(itemOutput)

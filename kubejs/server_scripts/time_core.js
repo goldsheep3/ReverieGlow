@@ -1,5 +1,5 @@
 /**
- * "@minecraft"
+ * "@vanilla"
  */
 ServerEvents.recipes(event => {
   // 时间核心的合成配方
@@ -104,7 +104,7 @@ ServerEvents.recipes(event => {
 })
 
 /**
- * "@minecraft"
+ * "@vanilla"
  */
 ItemEvents.rightClicked(event => {
   // 时间核心补充时间之瓶时间 

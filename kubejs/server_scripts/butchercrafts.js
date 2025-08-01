@@ -1,5 +1,5 @@
 /**
- * "@minecraft"
+ * "@vanilla"
  */
 ServerEvents.tags('item', event => {
     // 非骨头颅视为头颅用于合成
